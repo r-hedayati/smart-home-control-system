@@ -1,0 +1,46 @@
+**Item List**  
+  
+- Bypass Capacitor – C 100n (603): 23 + 3 + 1  
+- 100 uF (1.5p) C_in: 1  
+- Electrolytic Capacitor 1000 uF (1.5p) C_out: 1  
+- Electrolytic Capacitor 10 uF (1.5p) C_reset: 1  
+- USB Capacitor 4.7 uF (805): 2  
+- Capacitor 33n (603): 1  
+- Capacitor 10n (603): 2  
+- Capacitor 47p (603): 2  
+- Capacitor 27p (603): 2  
+- Capacitor 22p (603): 4  
+- Resistor 27K (603): 1  
+- Resistor 10K (603): 3  
+- Resistor 4.7K (603): 1  
+- Resistor 1.5K (603): 1  
+- Resistor 470 (603): 6  
+- Resistor 200 1% (603): 1  
+- Resistor 27 (603): 2  
+- Resistor 0 (603): 2  
+- Inductor Voltage 100uH (axial 0.3): 1  
+- Inductor AVCC 10uH (805): 1  
+- Ferrite bead: 2  
+- LED (3518) (Different colors): 5  
+- Diode 1N5822 (US1M): 1  
+- Diode 1N5819 (US1M): 1  
+- Crystal 20 MHz (SMD): 1  
+- Crystal 14.7456 MHz (SMD): 1  
+- Crystal 6 MHz (SMD): 1  
+- Crystal 32.67 kHz (SMD): 1  
+- Voltage Regulator LM2576: 1  
+- Temperature Sensor LM35: 1  
+- NAND Gate SN74HC00D: 1  
+- OR Gate HCF4071BM1: 1  
+- RTL8019AS: 1  
+- ATMEGA128A-AU: 1  
+- FT245BL: 1  
+- HR911105A: 1  
+- SRAM Samsung K6X0808C1D-GF55: 1  
+- D-latch 74AC573M: 1  
+- USB Port (mini): 2  
+- Switch SPDT: 1  
+- Switch Push Button: 1  
+- DC Port: 1  
+
+- Screw Hole: 4

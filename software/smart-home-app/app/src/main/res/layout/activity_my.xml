@@ -1,0 +1,126 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="395dp"
+        android:layout_height="30dp"
+        android:text="DestIP:"
+        android:textStyle="bold"
+        android:gravity="left"
+        android:scrollbars = "vertical"
+        android:layout_marginLeft="5dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        />
+
+    <EditText
+        android:id="@+id/IPAddr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="1dp">
+    </EditText>
+
+    <TextView
+        android:layout_width="390dp"
+        android:layout_height="30dp"
+        android:text="Port:"
+        android:textStyle="bold"
+        android:gravity="left"
+        android:layout_marginLeft="5dp"
+        android:scrollbars = "vertical"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        />
+
+        <EditText
+            android:id="@+id/Port"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp">
+        </EditText>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:weightSum="1.5">
+
+        <Button style="@style/Button"
+            android:id="@+id/on_button"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:text="LED_ON"
+            android:textColor="@color/custom_bg"
+            android:layout_gravity="left"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_weight="0.5"
+            />
+
+        <Button style="@style/Button"
+            android:id="@+id/off_button"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:text="LED_OFF"
+            android:textColor="@color/custom_bg"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="0.5"/>
+
+        <Button style="@style/Button"
+            android:id="@+id/temp_button"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:text="Temp"
+            android:textColor="@color/custom_bg"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="0.5"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        />
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        />
+
+</LinearLayout>

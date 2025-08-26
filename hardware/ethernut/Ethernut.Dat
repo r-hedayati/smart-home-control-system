@@ -1,0 +1,38 @@
+Field=Comment~String~Comment~100|Field=Description~String~Description~100|Field=Designator~String~Designator~100|Field=Footprint~String~Footprint~100|Field=LibRef~String~LibRef~100|Field=Quantity~Integer~Quantity~100|ReportField=Currency~<none>|ReportField=ProductionQuantity~1|ReportField=ProjectFileName~Ethernut.PrjPcb|ReportField=ProjectFullPath~D:\Project\Ethernut\Ethernut.PrjPcb|ReportField=Title~Bill of Materials For Project [Ethernut.PrjPcb] (No PCB Document Selected)|ReportField=TotalQuantity~79|ReportField=ReportTime~1:33:40 PM|ReportField=ReportDate~8/15/2015|ReportField=ReportDateTime~8/15/2015 1:33:40 PM|ReportField=OutputName~Bill of Materials|ReportField=OutputType~BOM_PartType|ReportField=GeneratorName~BOM|ReportField=GeneratorDescription~Bill of Materials|ReportField=VariantName~None|ReportField=Address1~|ReportField=Address2~|ReportField=Address3~|ReportField=Address4~|ReportField=Application_BuildNumber~|ReportField=ApprovedBy~|ReportField=Author~|ReportField=CheckedBy~|ReportField=CompanyName~|ReportField=CurrentDate~|ReportField=CurrentTime~|ReportField=Date~|ReportField=DocumentFullPathAndName~|ReportField=DocumentName~|ReportField=DocumentNumber~|ReportField=DrawnBy~|ReportField=Engineer~|ReportField=ImagePath~|ReportField=ModifiedDate~|ReportField=Organization~|ReportField=ProjectName~|ReportField=Revision~|ReportField=Rule~|ReportField=SheetNumber~|ReportField=SheetTotal~|ReportField=Time~|ReportField=Title~|ReportField=DataSourceFileName~Ethernut.PrjPcb|ReportField=DataSourceFullPath~D:\Project\Ethernut\Ethernut.PrjPcb
+Cap_El|Capacitor|C1, C_out, C_RESET|CA1.5P|Cap_El|3
+Cap_UP|Capacitor|C2, C3, C4, C5, C11, C12, C13, C14, C33, C245|1608[0603]|Cap_UP|10
+Cap|Capacitor|Cn1, Cn2, Cn3, Cn4, Cn5, Cn6, Cn7, Cn8, Cn9, Cn10, Cn11, Cn12, Cn14|1608[0603]|Cap|13
+Cap_UP|Capacitor|C_USB, C_USB2|2012[0805]|Cap_UP|2
+1N5822|1 Amp General Purpose Rectifier|D1|US1M|Diode|1
+1N5819|1 Amp General Purpose Rectifier|D3|us1m|Diode_ShotKey|1
+|Ferrite Beed|FB1, FB2|2012[0805]|Ferrite Beed|2
+Inductor|Inductor|L1|0402-A|Inductor|1
+Inductor|Inductor|L2|2012[0805]|Inductor|1
+Yellow|Typical BLUE SiC LED|LED COL, LED TX|3518|LED3|2
+Green|Typical BLUE SiC LED|LED RX|3518|LED3|1
+BLUE|Typical BLUE SiC LED|LED TEST|3518|LED3|1
+LED2|Typical RED, GREEN, YELLOW, AMBER GaAs LED|LED2|3518|LED2|1
+Header 2|Header, 2-Pin|P|HDR1X2|Header 2|1
+Header 8X2|Header, 8-Pin, Dual row|P1|HDR2X8|Header 8X2|1
+SPI|Header, 5-Pin, Dual row|P2|HDR2X5|Header 5X2|1
+JTAG|Header, 5-Pin, Dual row|P3|HDR2X5|Header 5X2|1
+Header 19X2|Header, 19-Pin, Dual row|P?|HDR2X19|Header 19X2|1
+Res|Semiconductor Resistor, Resistor, Semiconductor Resistor, Semiconductor Resistor, Semiconductor Resistor, Semiconductor Resistor, Semiconductor Resistor, Semiconductor Resistor, Semiconductor Resistor, Semiconductor Resistor, Semiconductor Resistor, Semiconductor Resistor, Semiconductor Resistor, Semiconductor Resistor, Semiconductor Resistor, Semiconductor Resistor|R0IN, R1, R02, R3, R4, R5, R6, R7, R8, R74, R77, R245, R_RESET, RDM, RST, RT|1608[0603]|Res, Res3, Res, Res, Res, Res, Res, Res, Res, Res, Res, Res, Res, Res, Res, Res|16
+es|Semiconductor Resistor|RDP|1608[0603]|Res|1
+SW-SPDT|SPDT Subminiature Toggle Switch, Right Angle Mounting, Vertical Actuation|S1|SW-SPDT|SW-SPDT|1
+SW-PB|Switch|S2|SPST-2|SW-PB|1
+SN74HC00D|Quadruple 2-Input Positive-NAND Gate|U|D014_N|SN74HC00D|1
+ATmega128A-AU|8-bit AVR Microcontroller, 2.7-5.5V, 16MHz, 128KB Flash, 4KB EEPROM, 4KB SRAM, 64-pin TQFP, Industrial Grade (-40°C to 85°C)|U1|64A_N|ATmega128A-AU|1
+RTL8019AS||U3|RTL8019AS|RTL8019_as|1
+RJ5con_filter||U4|RJ45con_Filter|HR911105A|1
+LM2576D2T-5|Easy Switcher 3.0A Step-Down Voltage Regulator|U5|936A-02|LM2576D2T-5|1
+K6X0808C1D-GF55|262144-bit (32768-word x 8-bit) CMOS SRAM|U6|PRSP0028DB-B_N|M5M5256DFP-55LL|1
+74AC573M|Octal D-Type Latch with 3-State Output Non-Inverting|U7|SO20_N|74AC573M|1
+LM35DZ|Precision Centigrade Temperature Sensor, 3-pin TO-92|U?|Z03A|LM35DZ|1
+FT245BL|USB/Parallel FIFO Bi-Directional Data Transfer Chip, LQFP-32, Pb-Free|UFT|LQFP-32_N|FT245BL|1
+|USB 2.0, Right Angle, SMT, AB Type, Receptacle, 5 Position, Black|USB1, USB2|USB_Mini|440479-1|2
+CHARGER||V_Input1|CHARGER|CHARGER|1
+32.67KHz|Crystal Oscillator|Y1|Xtal-smd|XTAL|1
+14.7456 MHz|Crystal Oscillator|Y2|Xtal-smd|XTAL|1
+20 MHz|Crystal Oscillator|Y3|Xtal-smd|XTAL|1
+6 MHz|Crystal Oscillator|Y4|Xtal-smd|XTAL|1

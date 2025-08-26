@@ -1,0 +1,47 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <color name="custom_theme_color">#ffffff</color>
+    <color name="custom_status_bar">#0000CD</color>
+    <color name="custom_bn">#1E90FF</color>
+    <color name="custom_bg">#ffffff</color>
+    <color name="custom_actionbar">#0000FF</color>
+    <color name="custom_actionbar_text">#ffffff</color>
+
+    <!-- Base application theme. -->
+    <style name="Theme.AppTheme" parent="@style/Theme.AppCompat.Light" >
+        <!-- Customize your theme here. -->
+        <item name="colorPrimaryDark">@color/custom_status_bar</item>
+        <item name="colorPrimary">@color/custom_actionbar</item>
+        <item name="android:windowBackground">@color/custom_bg</item>
+        <item name="android:actionBarStyle">@style/Theme.AppTheme.MyActionBar</item>
+        <item name="android:actionOverflowButtonStyle">@style/Theme.AppTheme.OverFlow</item>
+            <item name="actionBarStyle">@style/Theme.AppTheme.MyActionBar</item>
+            <item name="actionOverflowButtonStyle">@style/Theme.AppTheme.OverFlow</item>
+    </style>
+
+    <!-- ActionBar styles -->
+    <style name="Theme.AppTheme.MyActionBar" parent="@style/Widget.AppCompat.Light.ActionBar">
+        <item name="android:titleTextStyle">@style/Theme.AppTheme.MyActionBarTitleTextStyle</item>
+        <item name="android:background">@color/custom_actionbar</item>
+            <item name="titleTextStyle">@style/Theme.AppTheme.MyActionBarTitleTextStyle</item>
+            <item name="background">@color/custom_actionbar</item>
+    </style>
+
+    <style name="Theme.AppTheme.OverFlow" parent="@style/Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:src">@drawable/ic_action_settings</item>
+    </style>
+
+    <!-- ActionBar title text -->
+    <style name="Theme.AppTheme.MyActionBarTitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/custom_actionbar_text</item>
+    </style>
+
+    <style name="Button">
+        <item name="android:background">@color/custom_bn</item>
+        <item name="background">@color/custom_bn</item>
+    </style>
+
+
+
+</resources>

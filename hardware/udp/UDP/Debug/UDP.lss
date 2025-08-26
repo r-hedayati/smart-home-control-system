@@ -1,0 +1,2512 @@
+
+UDP.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000050  00800100  00000c06  00000c9a  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000c06  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000108  00800150  00800150  00000cea  2**0
+                  ALLOC
+  3 .stab         00000a14  00000000  00000000  00000cec  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  4 .stabstr      000001f8  00000000  00000000  00001700  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_aranges 00000060  00000000  00000000  000018f8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_pubnames 00000275  00000000  00000000  00001958  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_info   00000b3a  00000000  00000000  00001bcd  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_abbrev 000003d7  00000000  00000000  00002707  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_line   00000f9c  00000000  00000000  00002ade  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_frame  000001d0  00000000  00000000  00003a7c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_str    000003bd  00000000  00000000  00003c4c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_loc    0000097a  00000000  00000000  00004009  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_pubtypes 000000a3  00000000  00000000  00004983  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 46 00 	jmp	0x8c	; 0x8c <__ctors_end>
+   4:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+   8:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+   c:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  10:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  14:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  18:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  1c:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  20:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  24:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  28:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  2c:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  30:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  34:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  38:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  3c:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  40:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  44:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  48:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  4c:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  50:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  54:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  58:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  5c:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  60:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  64:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  68:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  6c:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  70:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  74:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  78:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  7c:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  80:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  84:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  88:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+
+0000008c <__ctors_end>:
+  8c:	11 24       	eor	r1, r1
+  8e:	1f be       	out	0x3f, r1	; 63
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+  92:	d0 e1       	ldi	r29, 0x10	; 16
+  94:	de bf       	out	0x3e, r29	; 62
+  96:	cd bf       	out	0x3d, r28	; 61
+
+00000098 <__do_copy_data>:
+  98:	11 e0       	ldi	r17, 0x01	; 1
+  9a:	a0 e0       	ldi	r26, 0x00	; 0
+  9c:	b1 e0       	ldi	r27, 0x01	; 1
+  9e:	e6 e0       	ldi	r30, 0x06	; 6
+  a0:	fc e0       	ldi	r31, 0x0C	; 12
+  a2:	00 e0       	ldi	r16, 0x00	; 0
+  a4:	0b bf       	out	0x3b, r16	; 59
+  a6:	02 c0       	rjmp	.+4      	; 0xac <__do_copy_data+0x14>
+  a8:	07 90       	elpm	r0, Z+
+  aa:	0d 92       	st	X+, r0
+  ac:	a0 35       	cpi	r26, 0x50	; 80
+  ae:	b1 07       	cpc	r27, r17
+  b0:	d9 f7       	brne	.-10     	; 0xa8 <__do_copy_data+0x10>
+
+000000b2 <__do_clear_bss>:
+  b2:	12 e0       	ldi	r17, 0x02	; 2
+  b4:	a0 e5       	ldi	r26, 0x50	; 80
+  b6:	b1 e0       	ldi	r27, 0x01	; 1
+  b8:	01 c0       	rjmp	.+2      	; 0xbc <.do_clear_bss_start>
+
+000000ba <.do_clear_bss_loop>:
+  ba:	1d 92       	st	X+, r1
+
+000000bc <.do_clear_bss_start>:
+  bc:	a8 35       	cpi	r26, 0x58	; 88
+  be:	b1 07       	cpc	r27, r17
+  c0:	e1 f7       	brne	.-8      	; 0xba <.do_clear_bss_loop>
+  c2:	0e 94 13 02 	call	0x426	; 0x426 <main>
+  c6:	0c 94 01 06 	jmp	0xc02	; 0xc02 <_exit>
+
+000000ca <__bad_interrupt>:
+  ca:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000ce <checksum>:
+//
+// For more information on how this algorithm works see:
+// http://www.netfor2.com/checksum.html
+// http://www.msc.uky.edu/ken/cs471/notes/chap3.htm
+// The RFC has also a C code example: http://www.faqs.org/rfcs/rfc1071.html
+uint16_t checksum(uint8_t *buf, uint16_t len,uint8_t type){
+  ce:	ef 92       	push	r14
+  d0:	ff 92       	push	r15
+  d2:	0f 93       	push	r16
+  d4:	1f 93       	push	r17
+  d6:	cf 93       	push	r28
+  d8:	df 93       	push	r29
+  da:	7c 01       	movw	r14, r24
+  dc:	8b 01       	movw	r16, r22
+        // type 0=ip 
+        //      1=udp
+        //      2=tcp
+        uint32_t sum = 0;
+
+        if(type==1){
+  de:	41 30       	cpi	r20, 0x01	; 1
+  e0:	41 f4       	brne	.+16     	; 0xf2 <checksum+0x24>
+                sum+=IP_PROTO_UDP_V; // protocol udp
+                // the length here is the length of udp (data+header len)
+                // =length - IP addr length
+                sum+=len-8; // = real udp len
+  e2:	cb 01       	movw	r24, r22
+  e4:	08 97       	sbiw	r24, 0x08	; 8
+  e6:	a0 e0       	ldi	r26, 0x00	; 0
+  e8:	b0 e0       	ldi	r27, 0x00	; 0
+  ea:	41 96       	adiw	r24, 0x11	; 17
+  ec:	a1 1d       	adc	r26, r1
+  ee:	b1 1d       	adc	r27, r1
+  f0:	0d c0       	rjmp	.+26     	; 0x10c <checksum+0x3e>
+        }
+        if(type==2){
+  f2:	42 30       	cpi	r20, 0x02	; 2
+  f4:	41 f4       	brne	.+16     	; 0x106 <checksum+0x38>
+                sum+=IP_PROTO_TCP_V; 
+                // the length here is the length of tcp (data+header len)
+                // =length - IP addr length
+                sum+=len-8; // = real tcp len
+  f6:	cb 01       	movw	r24, r22
+  f8:	08 97       	sbiw	r24, 0x08	; 8
+  fa:	a0 e0       	ldi	r26, 0x00	; 0
+  fc:	b0 e0       	ldi	r27, 0x00	; 0
+  fe:	06 96       	adiw	r24, 0x06	; 6
+ 100:	a1 1d       	adc	r26, r1
+ 102:	b1 1d       	adc	r27, r1
+ 104:	03 c0       	rjmp	.+6      	; 0x10c <checksum+0x3e>
+// The RFC has also a C code example: http://www.faqs.org/rfcs/rfc1071.html
+uint16_t checksum(uint8_t *buf, uint16_t len,uint8_t type){
+        // type 0=ip 
+        //      1=udp
+        //      2=tcp
+        uint32_t sum = 0;
+ 106:	80 e0       	ldi	r24, 0x00	; 0
+ 108:	90 e0       	ldi	r25, 0x00	; 0
+ 10a:	dc 01       	movw	r26, r24
+                // the length here is the length of tcp (data+header len)
+                // =length - IP addr length
+                sum+=len-8; // = real tcp len
+        }
+        // build the sum of 16bit words
+        while(len >1){
+ 10c:	02 30       	cpi	r16, 0x02	; 2
+ 10e:	11 05       	cpc	r17, r1
+ 110:	e8 f0       	brcs	.+58     	; 0x14c <checksum+0x7e>
+ 112:	e8 01       	movw	r28, r16
+ 114:	f7 01       	movw	r30, r14
+                sum += 0xFFFF & (*buf<<8|*(buf+1));
+ 116:	30 81       	ld	r19, Z
+ 118:	20 e0       	ldi	r18, 0x00	; 0
+ 11a:	41 81       	ldd	r20, Z+1	; 0x01
+ 11c:	50 e0       	ldi	r21, 0x00	; 0
+ 11e:	42 2b       	or	r20, r18
+ 120:	53 2b       	or	r21, r19
+ 122:	60 e0       	ldi	r22, 0x00	; 0
+ 124:	70 e0       	ldi	r23, 0x00	; 0
+ 126:	84 0f       	add	r24, r20
+ 128:	95 1f       	adc	r25, r21
+ 12a:	a6 1f       	adc	r26, r22
+ 12c:	b7 1f       	adc	r27, r23
+                buf+=2;
+ 12e:	32 96       	adiw	r30, 0x02	; 2
+                len-=2;
+ 130:	22 97       	sbiw	r28, 0x02	; 2
+                // the length here is the length of tcp (data+header len)
+                // =length - IP addr length
+                sum+=len-8; // = real tcp len
+        }
+        // build the sum of 16bit words
+        while(len >1){
+ 132:	c2 30       	cpi	r28, 0x02	; 2
+ 134:	d1 05       	cpc	r29, r1
+ 136:	78 f7       	brcc	.-34     	; 0x116 <checksum+0x48>
+//
+// For more information on how this algorithm works see:
+// http://www.netfor2.com/checksum.html
+// http://www.msc.uky.edu/ken/cs471/notes/chap3.htm
+// The RFC has also a C code example: http://www.faqs.org/rfcs/rfc1071.html
+uint16_t checksum(uint8_t *buf, uint16_t len,uint8_t type){
+ 138:	02 50       	subi	r16, 0x02	; 2
+ 13a:	10 40       	sbci	r17, 0x00	; 0
+ 13c:	98 01       	movw	r18, r16
+ 13e:	2e 7f       	andi	r18, 0xFE	; 254
+ 140:	2e 5f       	subi	r18, 0xFE	; 254
+ 142:	3f 4f       	sbci	r19, 0xFF	; 255
+ 144:	e2 0e       	add	r14, r18
+ 146:	f3 1e       	adc	r15, r19
+ 148:	01 70       	andi	r16, 0x01	; 1
+ 14a:	10 70       	andi	r17, 0x00	; 0
+                sum += 0xFFFF & (*buf<<8|*(buf+1));
+                buf+=2;
+                len-=2;
+        }
+        // if there is a byte left then add it (padded with zero)
+        if (len){
+ 14c:	01 15       	cp	r16, r1
+ 14e:	11 05       	cpc	r17, r1
+ 150:	59 f0       	breq	.+22     	; 0x168 <checksum+0x9a>
+                sum += (0xFF & *buf)<<8;
+ 152:	f7 01       	movw	r30, r14
+ 154:	30 81       	ld	r19, Z
+ 156:	20 e0       	ldi	r18, 0x00	; 0
+ 158:	44 27       	eor	r20, r20
+ 15a:	37 fd       	sbrc	r19, 7
+ 15c:	40 95       	com	r20
+ 15e:	54 2f       	mov	r21, r20
+ 160:	82 0f       	add	r24, r18
+ 162:	93 1f       	adc	r25, r19
+ 164:	a4 1f       	adc	r26, r20
+ 166:	b5 1f       	adc	r27, r21
+        }
+        // now calculate the sum over the bytes in the sum
+        // until the result is only 16bit long
+        while (sum>>16){
+ 168:	9d 01       	movw	r18, r26
+ 16a:	44 27       	eor	r20, r20
+ 16c:	55 27       	eor	r21, r21
+ 16e:	21 15       	cp	r18, r1
+ 170:	31 05       	cpc	r19, r1
+ 172:	41 05       	cpc	r20, r1
+ 174:	51 05       	cpc	r21, r1
+ 176:	71 f0       	breq	.+28     	; 0x194 <checksum+0xc6>
+                sum = (sum & 0xFFFF)+(sum >> 16);
+ 178:	a0 70       	andi	r26, 0x00	; 0
+ 17a:	b0 70       	andi	r27, 0x00	; 0
+ 17c:	82 0f       	add	r24, r18
+ 17e:	93 1f       	adc	r25, r19
+ 180:	a4 1f       	adc	r26, r20
+ 182:	b5 1f       	adc	r27, r21
+        if (len){
+                sum += (0xFF & *buf)<<8;
+        }
+        // now calculate the sum over the bytes in the sum
+        // until the result is only 16bit long
+        while (sum>>16){
+ 184:	9d 01       	movw	r18, r26
+ 186:	44 27       	eor	r20, r20
+ 188:	55 27       	eor	r21, r21
+ 18a:	21 15       	cp	r18, r1
+ 18c:	31 05       	cpc	r19, r1
+ 18e:	41 05       	cpc	r20, r1
+ 190:	51 05       	cpc	r21, r1
+ 192:	91 f7       	brne	.-28     	; 0x178 <checksum+0xaa>
+                sum = (sum & 0xFFFF)+(sum >> 16);
+        }
+        // build 1's complement:
+        return( (uint16_t) sum ^ 0xFFFF);
+ 194:	9c 01       	movw	r18, r24
+ 196:	20 95       	com	r18
+ 198:	30 95       	com	r19
+}
+ 19a:	82 2f       	mov	r24, r18
+ 19c:	93 2f       	mov	r25, r19
+ 19e:	df 91       	pop	r29
+ 1a0:	cf 91       	pop	r28
+ 1a2:	1f 91       	pop	r17
+ 1a4:	0f 91       	pop	r16
+ 1a6:	ff 90       	pop	r15
+ 1a8:	ef 90       	pop	r14
+ 1aa:	08 95       	ret
+
+000001ac <init_ip_arp_udp>:
+
+// you must call this function once before you use any of the other functions:
+void init_ip_arp_udp(uint8_t *mymac,uint8_t *myip){
+ 1ac:	a6 2f       	mov	r26, r22
+ 1ae:	b7 2f       	mov	r27, r23
+ 1b0:	e6 e5       	ldi	r30, 0x56	; 86
+ 1b2:	f1 e0       	ldi	r31, 0x01	; 1
+ 1b4:	9f 01       	movw	r18, r30
+ 1b6:	2c 5f       	subi	r18, 0xFC	; 252
+ 1b8:	3f 4f       	sbci	r19, 0xFF	; 255
+        uint8_t i=0;
+        while(i<4){
+                ipaddr[i]=myip[i];
+ 1ba:	4d 91       	ld	r20, X+
+ 1bc:	41 93       	st	Z+, r20
+}
+
+// you must call this function once before you use any of the other functions:
+void init_ip_arp_udp(uint8_t *mymac,uint8_t *myip){
+        uint8_t i=0;
+        while(i<4){
+ 1be:	e2 17       	cp	r30, r18
+ 1c0:	f3 07       	cpc	r31, r19
+ 1c2:	d9 f7       	brne	.-10     	; 0x1ba <init_ip_arp_udp+0xe>
+ 1c4:	a8 2f       	mov	r26, r24
+ 1c6:	b9 2f       	mov	r27, r25
+ 1c8:	e0 e5       	ldi	r30, 0x50	; 80
+ 1ca:	f1 e0       	ldi	r31, 0x01	; 1
+        // build 1's complement:
+        return( (uint16_t) sum ^ 0xFFFF);
+}
+
+// you must call this function once before you use any of the other functions:
+void init_ip_arp_udp(uint8_t *mymac,uint8_t *myip){
+ 1cc:	cf 01       	movw	r24, r30
+ 1ce:	06 96       	adiw	r24, 0x06	; 6
+                ipaddr[i]=myip[i];
+                i++;
+        }
+        i=0;
+        while(i<6){
+                macaddr[i]=mymac[i];
+ 1d0:	2d 91       	ld	r18, X+
+ 1d2:	21 93       	st	Z+, r18
+        while(i<4){
+                ipaddr[i]=myip[i];
+                i++;
+        }
+        i=0;
+        while(i<6){
+ 1d4:	e8 17       	cp	r30, r24
+ 1d6:	f9 07       	cpc	r31, r25
+ 1d8:	d9 f7       	brne	.-10     	; 0x1d0 <init_ip_arp_udp+0x24>
+                macaddr[i]=mymac[i];
+                i++;
+        }
+}
+ 1da:	08 95       	ret
+
+000001dc <eth_type_is_arp_and_my_ip>:
+
+uint8_t eth_type_is_arp_and_my_ip(uint8_t *buf,uint8_t len){
+ 1dc:	fc 01       	movw	r30, r24
+        uint8_t i=0;
+        //
+        if (len<41){
+ 1de:	69 32       	cpi	r22, 0x29	; 41
+ 1e0:	e8 f0       	brcs	.+58     	; 0x21c <eth_type_is_arp_and_my_ip+0x40>
+                return(0);
+        }
+        if(buf[ETH_TYPE_H_P] != ETHTYPE_ARP_H_V || 
+ 1e2:	84 85       	ldd	r24, Z+12	; 0x0c
+ 1e4:	88 30       	cpi	r24, 0x08	; 8
+ 1e6:	e1 f4       	brne	.+56     	; 0x220 <eth_type_is_arp_and_my_ip+0x44>
+ 1e8:	85 85       	ldd	r24, Z+13	; 0x0d
+ 1ea:	86 30       	cpi	r24, 0x06	; 6
+ 1ec:	d9 f4       	brne	.+54     	; 0x224 <eth_type_is_arp_and_my_ip+0x48>
+           buf[ETH_TYPE_L_P] != ETHTYPE_ARP_L_V){
+                return(0);
+        }
+        while(i<4){
+                if(buf[ETH_ARP_DST_IP_P+i] != ipaddr[i]){
+ 1ee:	96 a1       	ldd	r25, Z+38	; 0x26
+ 1f0:	80 91 56 01 	lds	r24, 0x0156
+ 1f4:	98 17       	cp	r25, r24
+ 1f6:	c1 f4       	brne	.+48     	; 0x228 <eth_type_is_arp_and_my_ip+0x4c>
+ 1f8:	97 a1       	ldd	r25, Z+39	; 0x27
+ 1fa:	80 91 57 01 	lds	r24, 0x0157
+ 1fe:	98 17       	cp	r25, r24
+ 200:	a9 f4       	brne	.+42     	; 0x22c <eth_type_is_arp_and_my_ip+0x50>
+ 202:	90 a5       	ldd	r25, Z+40	; 0x28
+ 204:	80 91 58 01 	lds	r24, 0x0158
+ 208:	98 17       	cp	r25, r24
+ 20a:	91 f4       	brne	.+36     	; 0x230 <eth_type_is_arp_and_my_ip+0x54>
+                macaddr[i]=mymac[i];
+                i++;
+        }
+}
+
+uint8_t eth_type_is_arp_and_my_ip(uint8_t *buf,uint8_t len){
+ 20c:	81 e0       	ldi	r24, 0x01	; 1
+ 20e:	21 a5       	ldd	r18, Z+41	; 0x29
+ 210:	90 91 59 01 	lds	r25, 0x0159
+ 214:	29 17       	cp	r18, r25
+ 216:	69 f0       	breq	.+26     	; 0x232 <eth_type_is_arp_and_my_ip+0x56>
+ 218:	80 e0       	ldi	r24, 0x00	; 0
+ 21a:	08 95       	ret
+        uint8_t i=0;
+        //
+        if (len<41){
+                return(0);
+ 21c:	80 e0       	ldi	r24, 0x00	; 0
+ 21e:	08 95       	ret
+        }
+        if(buf[ETH_TYPE_H_P] != ETHTYPE_ARP_H_V || 
+           buf[ETH_TYPE_L_P] != ETHTYPE_ARP_L_V){
+                return(0);
+ 220:	80 e0       	ldi	r24, 0x00	; 0
+ 222:	08 95       	ret
+ 224:	80 e0       	ldi	r24, 0x00	; 0
+ 226:	08 95       	ret
+        }
+        while(i<4){
+                if(buf[ETH_ARP_DST_IP_P+i] != ipaddr[i]){
+                        return(0);
+ 228:	80 e0       	ldi	r24, 0x00	; 0
+ 22a:	08 95       	ret
+ 22c:	80 e0       	ldi	r24, 0x00	; 0
+ 22e:	08 95       	ret
+ 230:	80 e0       	ldi	r24, 0x00	; 0
+                }
+                i++;
+        }
+        return(1);
+}
+ 232:	08 95       	ret
+
+00000234 <eth_type_is_ip_and_my_ip>:
+
+uint8_t eth_type_is_ip_and_my_ip(uint8_t *buf,uint8_t len){
+ 234:	fc 01       	movw	r30, r24
+        uint8_t i=0;
+        //eth+ip+udp header is 42
+        if (len<42){
+ 236:	6a 32       	cpi	r22, 0x2A	; 42
+ 238:	e8 f0       	brcs	.+58     	; 0x274 <eth_type_is_ip_and_my_ip+0x40>
+                return(0);
+        }
+        if(buf[ETH_TYPE_H_P]!=ETHTYPE_IP_H_V || 
+ 23a:	84 85       	ldd	r24, Z+12	; 0x0c
+ 23c:	88 30       	cpi	r24, 0x08	; 8
+ 23e:	e1 f4       	brne	.+56     	; 0x278 <eth_type_is_ip_and_my_ip+0x44>
+ 240:	85 85       	ldd	r24, Z+13	; 0x0d
+ 242:	88 23       	and	r24, r24
+ 244:	d9 f4       	brne	.+54     	; 0x27c <eth_type_is_ip_and_my_ip+0x48>
+           buf[ETH_TYPE_L_P]!=ETHTYPE_IP_L_V){
+                return(0);
+        }
+        while(i<4){
+                if(buf[IP_DST_P+i]!=ipaddr[i]){
+ 246:	96 8d       	ldd	r25, Z+30	; 0x1e
+ 248:	80 91 56 01 	lds	r24, 0x0156
+ 24c:	98 17       	cp	r25, r24
+ 24e:	c1 f4       	brne	.+48     	; 0x280 <eth_type_is_ip_and_my_ip+0x4c>
+ 250:	97 8d       	ldd	r25, Z+31	; 0x1f
+ 252:	80 91 57 01 	lds	r24, 0x0157
+ 256:	98 17       	cp	r25, r24
+ 258:	a9 f4       	brne	.+42     	; 0x284 <eth_type_is_ip_and_my_ip+0x50>
+ 25a:	90 a1       	ldd	r25, Z+32	; 0x20
+ 25c:	80 91 58 01 	lds	r24, 0x0158
+ 260:	98 17       	cp	r25, r24
+ 262:	91 f4       	brne	.+36     	; 0x288 <eth_type_is_ip_and_my_ip+0x54>
+                i++;
+        }
+        return(1);
+}
+
+uint8_t eth_type_is_ip_and_my_ip(uint8_t *buf,uint8_t len){
+ 264:	81 e0       	ldi	r24, 0x01	; 1
+ 266:	21 a1       	ldd	r18, Z+33	; 0x21
+ 268:	90 91 59 01 	lds	r25, 0x0159
+ 26c:	29 17       	cp	r18, r25
+ 26e:	69 f0       	breq	.+26     	; 0x28a <eth_type_is_ip_and_my_ip+0x56>
+ 270:	80 e0       	ldi	r24, 0x00	; 0
+ 272:	08 95       	ret
+        uint8_t i=0;
+        //eth+ip+udp header is 42
+        if (len<42){
+                return(0);
+ 274:	80 e0       	ldi	r24, 0x00	; 0
+ 276:	08 95       	ret
+        }
+        if(buf[ETH_TYPE_H_P]!=ETHTYPE_IP_H_V || 
+           buf[ETH_TYPE_L_P]!=ETHTYPE_IP_L_V){
+                return(0);
+ 278:	80 e0       	ldi	r24, 0x00	; 0
+ 27a:	08 95       	ret
+ 27c:	80 e0       	ldi	r24, 0x00	; 0
+ 27e:	08 95       	ret
+        }
+        while(i<4){
+                if(buf[IP_DST_P+i]!=ipaddr[i]){
+                        return(0);
+ 280:	80 e0       	ldi	r24, 0x00	; 0
+ 282:	08 95       	ret
+ 284:	80 e0       	ldi	r24, 0x00	; 0
+ 286:	08 95       	ret
+ 288:	80 e0       	ldi	r24, 0x00	; 0
+                }
+                i++;
+        }
+        return(1);
+}
+ 28a:	08 95       	ret
+
+0000028c <make_eth>:
+
+// make a return eth header from a received eth packet
+void make_eth(uint8_t *buf)
+{
+ 28c:	e8 2f       	mov	r30, r24
+ 28e:	f9 2f       	mov	r31, r25
+ 290:	a0 e5       	ldi	r26, 0x50	; 80
+ 292:	b1 e0       	ldi	r27, 0x01	; 1
+        }
+        return(1);
+}
+
+// make a return eth header from a received eth packet
+void make_eth(uint8_t *buf)
+ 294:	cd 01       	movw	r24, r26
+ 296:	06 96       	adiw	r24, 0x06	; 6
+{
+        uint8_t i=0;
+        //
+        //copy the destination mac from the source and fill my mac into src
+        while(i<6){
+                buf[ETH_DST_MAC +i]=buf[ETH_SRC_MAC +i];
+ 298:	26 81       	ldd	r18, Z+6	; 0x06
+ 29a:	21 93       	st	Z+, r18
+                buf[ETH_SRC_MAC +i]=macaddr[i];
+ 29c:	2d 91       	ld	r18, X+
+ 29e:	25 83       	std	Z+5, r18	; 0x05
+void make_eth(uint8_t *buf)
+{
+        uint8_t i=0;
+        //
+        //copy the destination mac from the source and fill my mac into src
+        while(i<6){
+ 2a0:	a8 17       	cp	r26, r24
+ 2a2:	b9 07       	cpc	r27, r25
+ 2a4:	c9 f7       	brne	.-14     	; 0x298 <make_eth+0xc>
+                buf[ETH_DST_MAC +i]=buf[ETH_SRC_MAC +i];
+                buf[ETH_SRC_MAC +i]=macaddr[i];
+                i++;
+        }
+}
+ 2a6:	08 95       	ret
+
+000002a8 <make_ip>:
+
+// make a return ip header from a received ip packet
+void make_ip(uint8_t *buf)
+{
+ 2a8:	cf 93       	push	r28
+ 2aa:	df 93       	push	r29
+ 2ac:	ec 01       	movw	r28, r24
+ 2ae:	a6 e5       	ldi	r26, 0x56	; 86
+ 2b0:	b1 e0       	ldi	r27, 0x01	; 1
+                i++;
+        }
+}
+
+// make a return ip header from a received ip packet
+void make_ip(uint8_t *buf)
+ 2b2:	fc 01       	movw	r30, r24
+ 2b4:	7a 96       	adiw	r30, 0x1a	; 26
+ 2b6:	cd 01       	movw	r24, r26
+ 2b8:	04 96       	adiw	r24, 0x04	; 4
+{
+        uint8_t i=0;
+        uint16_t ck;
+        while(i<4){
+                buf[IP_DST_P+i]=buf[IP_SRC_P+i];
+ 2ba:	20 81       	ld	r18, Z
+ 2bc:	24 83       	std	Z+4, r18	; 0x04
+                buf[IP_SRC_P+i]=ipaddr[i];
+ 2be:	2d 91       	ld	r18, X+
+ 2c0:	21 93       	st	Z+, r18
+// make a return ip header from a received ip packet
+void make_ip(uint8_t *buf)
+{
+        uint8_t i=0;
+        uint16_t ck;
+        while(i<4){
+ 2c2:	a8 17       	cp	r26, r24
+ 2c4:	b9 07       	cpc	r27, r25
+ 2c6:	c9 f7       	brne	.-14     	; 0x2ba <make_ip+0x12>
+                buf[IP_DST_P+i]=buf[IP_SRC_P+i];
+                buf[IP_SRC_P+i]=ipaddr[i];
+                i++;
+        }
+        // clear the 2 byte checksum
+        buf[IP_CHECKSUM_P]=0;
+ 2c8:	18 8e       	std	Y+24, r1	; 0x18
+        buf[IP_CHECKSUM_P+1]=0;
+ 2ca:	19 8e       	std	Y+25, r1	; 0x19
+        buf[IP_FLAGS_P]=0x40; // don't fragment
+ 2cc:	80 e4       	ldi	r24, 0x40	; 64
+ 2ce:	8c 8b       	std	Y+20, r24	; 0x14
+        buf[IP_FLAGS_P+1]=0;  // fragement offset
+ 2d0:	1d 8a       	std	Y+21, r1	; 0x15
+        buf[IP_TTL_P]=64; // ttl
+ 2d2:	8e 8b       	std	Y+22, r24	; 0x16
+        // calculate the checksum:
+        ck=checksum(&buf[IP_P], IP_HEADER_LEN,0);
+ 2d4:	ce 01       	movw	r24, r28
+ 2d6:	0e 96       	adiw	r24, 0x0e	; 14
+ 2d8:	64 e1       	ldi	r22, 0x14	; 20
+ 2da:	70 e0       	ldi	r23, 0x00	; 0
+ 2dc:	40 e0       	ldi	r20, 0x00	; 0
+ 2de:	0e 94 67 00 	call	0xce	; 0xce <checksum>
+        buf[IP_CHECKSUM_P]=ck>>8;
+ 2e2:	98 8f       	std	Y+24, r25	; 0x18
+        buf[IP_CHECKSUM_P+1]=ck& 0xff;
+ 2e4:	89 8f       	std	Y+25, r24	; 0x19
+}
+ 2e6:	df 91       	pop	r29
+ 2e8:	cf 91       	pop	r28
+ 2ea:	08 95       	ret
+
+000002ec <make_arp_answer_from_request>:
+
+void make_arp_answer_from_request(uint8_t *buf,uint8_t len)
+{
+ 2ec:	cf 93       	push	r28
+ 2ee:	df 93       	push	r29
+ 2f0:	ec 01       	movw	r28, r24
+        uint8_t i=0;
+        //
+        make_eth(buf);
+ 2f2:	0e 94 46 01 	call	0x28c	; 0x28c <make_eth>
+        buf[ETH_ARP_OPCODE_H_P]=ETH_ARP_OPCODE_REPLY_H_V;
+ 2f6:	1c 8a       	std	Y+20, r1	; 0x14
+        buf[ETH_ARP_OPCODE_L_P]=ETH_ARP_OPCODE_REPLY_L_V;
+ 2f8:	82 e0       	ldi	r24, 0x02	; 2
+ 2fa:	8d 8b       	std	Y+21, r24	; 0x15
+ 2fc:	a0 e5       	ldi	r26, 0x50	; 80
+ 2fe:	b1 e0       	ldi	r27, 0x01	; 1
+        ck=checksum(&buf[IP_P], IP_HEADER_LEN,0);
+        buf[IP_CHECKSUM_P]=ck>>8;
+        buf[IP_CHECKSUM_P+1]=ck& 0xff;
+}
+
+void make_arp_answer_from_request(uint8_t *buf,uint8_t len)
+ 300:	fe 01       	movw	r30, r28
+ 302:	76 96       	adiw	r30, 0x16	; 22
+ 304:	cd 01       	movw	r24, r26
+ 306:	06 96       	adiw	r24, 0x06	; 6
+        make_eth(buf);
+        buf[ETH_ARP_OPCODE_H_P]=ETH_ARP_OPCODE_REPLY_H_V;
+        buf[ETH_ARP_OPCODE_L_P]=ETH_ARP_OPCODE_REPLY_L_V;
+        // fill the mac addresses:
+        while(i<6){
+                buf[ETH_ARP_DST_MAC_P+i]=buf[ETH_ARP_SRC_MAC_P+i];
+ 308:	20 81       	ld	r18, Z
+ 30a:	22 87       	std	Z+10, r18	; 0x0a
+			    //buf[ETH_ARP_DST_MAC_P+i]=macaddr1[i];
+                buf[ETH_ARP_SRC_MAC_P+i]=macaddr[i];
+ 30c:	2d 91       	ld	r18, X+
+ 30e:	21 93       	st	Z+, r18
+        //
+        make_eth(buf);
+        buf[ETH_ARP_OPCODE_H_P]=ETH_ARP_OPCODE_REPLY_H_V;
+        buf[ETH_ARP_OPCODE_L_P]=ETH_ARP_OPCODE_REPLY_L_V;
+        // fill the mac addresses:
+        while(i<6){
+ 310:	a8 17       	cp	r26, r24
+ 312:	b9 07       	cpc	r27, r25
+ 314:	c9 f7       	brne	.-14     	; 0x308 <make_arp_answer_from_request+0x1c>
+ 316:	a6 e5       	ldi	r26, 0x56	; 86
+ 318:	b1 e0       	ldi	r27, 0x01	; 1
+        ck=checksum(&buf[IP_P], IP_HEADER_LEN,0);
+        buf[IP_CHECKSUM_P]=ck>>8;
+        buf[IP_CHECKSUM_P+1]=ck& 0xff;
+}
+
+void make_arp_answer_from_request(uint8_t *buf,uint8_t len)
+ 31a:	fe 01       	movw	r30, r28
+ 31c:	7c 96       	adiw	r30, 0x1c	; 28
+ 31e:	cd 01       	movw	r24, r26
+ 320:	04 96       	adiw	r24, 0x04	; 4
+                buf[ETH_ARP_SRC_MAC_P+i]=macaddr[i];
+                i++;
+        }
+        i=0;
+        while(i<4){
+                 buf[ETH_ARP_DST_IP_P+i]=buf[ETH_ARP_SRC_IP_P+i];
+ 322:	20 81       	ld	r18, Z
+ 324:	22 87       	std	Z+10, r18	; 0x0a
+				//buf[ETH_ARP_DST_IP_P+i]=ipaddr1[i];
+                buf[ETH_ARP_SRC_IP_P+i]=ipaddr[i];
+ 326:	2d 91       	ld	r18, X+
+ 328:	21 93       	st	Z+, r18
+			    //buf[ETH_ARP_DST_MAC_P+i]=macaddr1[i];
+                buf[ETH_ARP_SRC_MAC_P+i]=macaddr[i];
+                i++;
+        }
+        i=0;
+        while(i<4){
+ 32a:	a8 17       	cp	r26, r24
+ 32c:	b9 07       	cpc	r27, r25
+ 32e:	c9 f7       	brne	.-14     	; 0x322 <make_arp_answer_from_request+0x36>
+				//buf[ETH_ARP_DST_IP_P+i]=ipaddr1[i];
+                buf[ETH_ARP_SRC_IP_P+i]=ipaddr[i];
+                i++;
+        }
+        // eth+arp is 42 bytes:
+        nicSend(42,buf); 
+ 330:	8a e2       	ldi	r24, 0x2A	; 42
+ 332:	90 e0       	ldi	r25, 0x00	; 0
+ 334:	be 01       	movw	r22, r28
+ 336:	0e 94 b8 03 	call	0x770	; 0x770 <nicSend>
+}
+ 33a:	df 91       	pop	r29
+ 33c:	cf 91       	pop	r28
+ 33e:	08 95       	ret
+
+00000340 <make_echo_reply_from_request>:
+
+void make_echo_reply_from_request(uint8_t *buf,uint8_t len)
+{
+ 340:	1f 93       	push	r17
+ 342:	cf 93       	push	r28
+ 344:	df 93       	push	r29
+ 346:	ec 01       	movw	r28, r24
+ 348:	16 2f       	mov	r17, r22
+        make_eth(buf);
+ 34a:	0e 94 46 01 	call	0x28c	; 0x28c <make_eth>
+        make_ip(buf);
+ 34e:	ce 01       	movw	r24, r28
+ 350:	0e 94 54 01 	call	0x2a8	; 0x2a8 <make_ip>
+        buf[ICMP_TYPE_P]=ICMP_TYPE_ECHOREPLY_V;
+ 354:	1a a2       	std	Y+34, r1	; 0x22
+        // we changed only the icmp.type field from request(=8) to reply(=0).
+        // we can therefore easily correct the checksum:
+        if (buf[ICMP_CHECKSUM_P] > (0xff-0x08)){
+ 356:	8c a1       	ldd	r24, Y+36	; 0x24
+ 358:	88 3f       	cpi	r24, 0xF8	; 248
+ 35a:	18 f0       	brcs	.+6      	; 0x362 <make_echo_reply_from_request+0x22>
+                buf[ICMP_CHECKSUM_P+1]++;
+ 35c:	8d a1       	ldd	r24, Y+37	; 0x25
+ 35e:	8f 5f       	subi	r24, 0xFF	; 255
+ 360:	8d a3       	std	Y+37, r24	; 0x25
+        }
+        buf[ICMP_CHECKSUM_P]+=0x08;
+ 362:	8c a1       	ldd	r24, Y+36	; 0x24
+ 364:	88 5f       	subi	r24, 0xF8	; 248
+ 366:	8c a3       	std	Y+36, r24	; 0x24
+        //
+        nicSend(len,buf);
+ 368:	81 2f       	mov	r24, r17
+ 36a:	90 e0       	ldi	r25, 0x00	; 0
+ 36c:	be 01       	movw	r22, r28
+ 36e:	0e 94 b8 03 	call	0x770	; 0x770 <nicSend>
+}
+ 372:	df 91       	pop	r29
+ 374:	cf 91       	pop	r28
+ 376:	1f 91       	pop	r17
+ 378:	08 95       	ret
+
+0000037a <make_udp_reply_from_request>:
+
+
+// you can send a max of 220 bytes of data
+void make_udp_reply_from_request(uint8_t *buf,char *data,uint8_t datalen,uint16_t port)
+{
+ 37a:	df 92       	push	r13
+ 37c:	ef 92       	push	r14
+ 37e:	ff 92       	push	r15
+ 380:	0f 93       	push	r16
+ 382:	1f 93       	push	r17
+ 384:	cf 93       	push	r28
+ 386:	df 93       	push	r29
+ 388:	ec 01       	movw	r28, r24
+ 38a:	e6 2e       	mov	r14, r22
+ 38c:	d7 2e       	mov	r13, r23
+ 38e:	04 2f       	mov	r16, r20
+ 390:	f2 2e       	mov	r15, r18
+ 392:	13 2f       	mov	r17, r19
+        uint8_t i=0;
+        uint16_t ck;
+        make_eth(buf);
+ 394:	0e 94 46 01 	call	0x28c	; 0x28c <make_eth>
+ 398:	0d 3d       	cpi	r16, 0xDD	; 221
+ 39a:	08 f0       	brcs	.+2      	; 0x39e <make_udp_reply_from_request+0x24>
+ 39c:	0c ed       	ldi	r16, 0xDC	; 220
+        if (datalen>220){
+                datalen=220;
+        }
+        // total length field in the IP header must be set:
+        buf[IP_TOTLEN_H_P]=0;
+ 39e:	18 8a       	std	Y+16, r1	; 0x10
+        buf[IP_TOTLEN_L_P]=IP_HEADER_LEN+UDP_HEADER_LEN+datalen;
+ 3a0:	80 2f       	mov	r24, r16
+ 3a2:	84 5e       	subi	r24, 0xE4	; 228
+ 3a4:	89 8b       	std	Y+17, r24	; 0x11
+        make_ip(buf);
+ 3a6:	ce 01       	movw	r24, r28
+ 3a8:	0e 94 54 01 	call	0x2a8	; 0x2a8 <make_ip>
+        // send to port:
+        //buf[UDP_DST_PORT_H_P]=port>>8;
+        //buf[UDP_DST_PORT_L_P]=port & 0xff;
+        // sent to port of sender and use "port" as own source:
+        buf[UDP_DST_PORT_H_P]=port>>8;
+ 3ac:	1c a3       	std	Y+36, r17	; 0x24
+        buf[UDP_DST_PORT_L_P]=port & 0xff;
+ 3ae:	fd a2       	std	Y+37, r15	; 0x25
+        buf[UDP_SRC_PORT_H_P]=port>>8;
+ 3b0:	1a a3       	std	Y+34, r17	; 0x22
+        buf[UDP_SRC_PORT_L_P]=port & 0xff;
+ 3b2:	fb a2       	std	Y+35, r15	; 0x23
+        // source port does not matter and is what the sender used.
+        // calculte the udp length:
+        buf[UDP_LEN_H_P]=0;
+ 3b4:	1e a2       	std	Y+38, r1	; 0x26
+        buf[UDP_LEN_L_P]=UDP_HEADER_LEN+datalen;
+ 3b6:	80 2f       	mov	r24, r16
+ 3b8:	88 5f       	subi	r24, 0xF8	; 248
+ 3ba:	8f a3       	std	Y+39, r24	; 0x27
+        // zero the checksum
+        buf[UDP_CHECKSUM_H_P]=0;
+ 3bc:	18 a6       	std	Y+40, r1	; 0x28
+        buf[UDP_CHECKSUM_L_P]=0;
+ 3be:	19 a6       	std	Y+41, r1	; 0x29
+        // copy the data:
+        while(i<datalen){
+ 3c0:	00 23       	and	r16, r16
+ 3c2:	51 f0       	breq	.+20     	; 0x3d8 <make_udp_reply_from_request+0x5e>
+ 3c4:	ae 2d       	mov	r26, r14
+ 3c6:	bd 2d       	mov	r27, r13
+        nicSend(len,buf);
+}
+
+
+// you can send a max of 220 bytes of data
+void make_udp_reply_from_request(uint8_t *buf,char *data,uint8_t datalen,uint16_t port)
+ 3c8:	fe 01       	movw	r30, r28
+ 3ca:	ba 96       	adiw	r30, 0x2a	; 42
+{
+        uint8_t i=0;
+ 3cc:	80 e0       	ldi	r24, 0x00	; 0
+        // zero the checksum
+        buf[UDP_CHECKSUM_H_P]=0;
+        buf[UDP_CHECKSUM_L_P]=0;
+        // copy the data:
+        while(i<datalen){
+                buf[UDP_DATA_P+i]=data[i];
+ 3ce:	9d 91       	ld	r25, X+
+ 3d0:	91 93       	st	Z+, r25
+                i++;
+ 3d2:	8f 5f       	subi	r24, 0xFF	; 255
+        buf[UDP_LEN_L_P]=UDP_HEADER_LEN+datalen;
+        // zero the checksum
+        buf[UDP_CHECKSUM_H_P]=0;
+        buf[UDP_CHECKSUM_L_P]=0;
+        // copy the data:
+        while(i<datalen){
+ 3d4:	80 17       	cp	r24, r16
+ 3d6:	d8 f3       	brcs	.-10     	; 0x3ce <make_udp_reply_from_request+0x54>
+                buf[UDP_DATA_P+i]=data[i];
+                i++;
+        }
+        ck=checksum(&buf[IP_SRC_P], 16 + datalen,1);
+ 3d8:	10 e0       	ldi	r17, 0x00	; 0
+ 3da:	b8 01       	movw	r22, r16
+ 3dc:	60 5f       	subi	r22, 0xF0	; 240
+ 3de:	7f 4f       	sbci	r23, 0xFF	; 255
+ 3e0:	ce 01       	movw	r24, r28
+ 3e2:	4a 96       	adiw	r24, 0x1a	; 26
+ 3e4:	41 e0       	ldi	r20, 0x01	; 1
+ 3e6:	0e 94 67 00 	call	0xce	; 0xce <checksum>
+        buf[UDP_CHECKSUM_H_P]=ck>>8;
+ 3ea:	98 a7       	std	Y+40, r25	; 0x28
+        buf[UDP_CHECKSUM_L_P]=ck& 0xff;
+ 3ec:	89 a7       	std	Y+41, r24	; 0x29
+        nicSend(UDP_HEADER_LEN+IP_HEADER_LEN+ETH_HEADER_LEN+datalen,buf);
+ 3ee:	c8 01       	movw	r24, r16
+ 3f0:	8a 96       	adiw	r24, 0x2a	; 42
+ 3f2:	be 01       	movw	r22, r28
+ 3f4:	0e 94 b8 03 	call	0x770	; 0x770 <nicSend>
+}
+ 3f8:	df 91       	pop	r29
+ 3fa:	cf 91       	pop	r28
+ 3fc:	1f 91       	pop	r17
+ 3fe:	0f 91       	pop	r16
+ 400:	ff 90       	pop	r15
+ 402:	ef 90       	pop	r14
+ 404:	df 90       	pop	r13
+ 406:	08 95       	ret
+
+00000408 <verify_password>:
+// the password string (only the first 3 char checked):
+static char password[]="mar";
+
+// 
+uint8_t verify_password(char *str)
+{
+ 408:	bc 01       	movw	r22, r24
+        // the first characters of the received string are
+        // a simple password/cookie:
+        if (strncmp(password,str,3)==0){
+ 40a:	8c e4       	ldi	r24, 0x4C	; 76
+ 40c:	91 e0       	ldi	r25, 0x01	; 1
+ 40e:	43 e0       	ldi	r20, 0x03	; 3
+ 410:	50 e0       	ldi	r21, 0x00	; 0
+ 412:	0e 94 ae 05 	call	0xb5c	; 0xb5c <strncmp>
+ 416:	28 2f       	mov	r18, r24
+ 418:	39 2f       	mov	r19, r25
+                return(1);
+ 41a:	81 e0       	ldi	r24, 0x01	; 1
+ 41c:	21 15       	cp	r18, r1
+ 41e:	31 05       	cpc	r19, r1
+ 420:	09 f0       	breq	.+2      	; 0x424 <verify_password+0x1c>
+ 422:	80 e0       	ldi	r24, 0x00	; 0
+        }
+        return(0);
+}
+ 424:	08 95       	ret
+
+00000426 <main>:
+
+int main(void){
+ 426:	2f 92       	push	r2
+ 428:	3f 92       	push	r3
+ 42a:	4f 92       	push	r4
+ 42c:	5f 92       	push	r5
+ 42e:	6f 92       	push	r6
+ 430:	7f 92       	push	r7
+ 432:	8f 92       	push	r8
+ 434:	9f 92       	push	r9
+ 436:	af 92       	push	r10
+ 438:	bf 92       	push	r11
+ 43a:	cf 92       	push	r12
+ 43c:	df 92       	push	r13
+ 43e:	ef 92       	push	r14
+ 440:	ff 92       	push	r15
+ 442:	0f 93       	push	r16
+ 444:	1f 93       	push	r17
+ 446:	df 93       	push	r29
+ 448:	cf 93       	push	r28
+ 44a:	cd b7       	in	r28, 0x3d	; 61
+ 44c:	de b7       	in	r29, 0x3e	; 62
+ 44e:	a0 97       	sbiw	r28, 0x20	; 32
+ 450:	0f b6       	in	r0, 0x3f	; 63
+ 452:	f8 94       	cli
+ 454:	de bf       	out	0x3e, r29	; 62
+ 456:	0f be       	out	0x3f, r0	; 63
+ 458:	cd bf       	out	0x3d, r28	; 61
+        uint8_t cmd_pos=0;
+        uint8_t payloadlen=0;
+		uint16_t result;
+        char str[30];
+        char cmdval;
+		DDRB |= _BV(PORTB6);
+ 45a:	be 9a       	sbi	0x17, 6	; 23
+		ADMUX = (1<<REFS0);
+ 45c:	80 e4       	ldi	r24, 0x40	; 64
+ 45e:	87 b9       	out	0x07, r24	; 7
+     	
+        cli();
+ 460:	f8 94       	cli
+
+		// Init External Memory
+		MCUCR |= _BV(SRE);
+ 462:	85 b7       	in	r24, 0x35	; 53
+ 464:	80 68       	ori	r24, 0x80	; 128
+ 466:	85 bf       	out	0x35, r24	; 53
+        
+        
+		nicInit();
+ 468:	0e 94 ab 05 	call	0xb56	; 0xb56 <nicInit>
+        
+        //init the ethernet/ip layer:
+        init_ip_arp_udp(mymac,myip);
+ 46c:	82 e4       	ldi	r24, 0x42	; 66
+ 46e:	91 e0       	ldi	r25, 0x01	; 1
+ 470:	68 e4       	ldi	r22, 0x48	; 72
+ 472:	71 e0       	ldi	r23, 0x01	; 1
+ 474:	0e 94 d6 00 	call	0x1ac	; 0x1ac <init_ip_arp_udp>
+		
+		sei();
+ 478:	78 94       	sei
+        while(1){
+                // get the next new packet:
+                plen = nicPoll(BUFFER_SIZE, buf);
+ 47a:	0a e5       	ldi	r16, 0x5A	; 90
+ 47c:	11 e0       	ldi	r17, 0x01	; 1
+                // check if ip packets (icmp or udp) are for us:
+                if(eth_type_is_ip_and_my_ip(buf,plen)==0){
+                        continue;
+                }
+                
+                if(buf[IP_PROTO_P]==IP_PROTO_ICMP_V && buf[ICMP_TYPE_P]==ICMP_TYPE_ECHOREQUEST_V){
+ 47e:	0f 2e       	mov	r0, r31
+ 480:	f1 e7       	ldi	r31, 0x71	; 113
+ 482:	cf 2e       	mov	r12, r31
+ 484:	f1 e0       	ldi	r31, 0x01	; 1
+ 486:	df 2e       	mov	r13, r31
+ 488:	f0 2d       	mov	r31, r0
+                        // a ping packet, let's send pong
+                        make_echo_reply_from_request(buf,plen);
+                        continue;
+                }
+                // we listen on port 1200=0x4B0
+                if (buf[IP_PROTO_P]==IP_PROTO_UDP_V&&buf[UDP_DST_PORT_H_P]==4&&buf[UDP_DST_PORT_L_P]==0xb0){
+ 48a:	0f 2e       	mov	r0, r31
+ 48c:	fe e7       	ldi	r31, 0x7E	; 126
+ 48e:	8f 2e       	mov	r8, r31
+ 490:	f1 e0       	ldi	r31, 0x01	; 1
+ 492:	9f 2e       	mov	r9, r31
+ 494:	f0 2d       	mov	r31, r0
+ 496:	0f 2e       	mov	r0, r31
+ 498:	ff e7       	ldi	r31, 0x7F	; 127
+ 49a:	4f 2e       	mov	r4, r31
+ 49c:	f1 e0       	ldi	r31, 0x01	; 1
+ 49e:	5f 2e       	mov	r5, r31
+ 4a0:	f0 2d       	mov	r31, r0
+                        payloadlen=buf[UDP_LEN_L_P]-UDP_HEADER_LEN;
+ 4a2:	0f 2e       	mov	r0, r31
+ 4a4:	f1 e8       	ldi	r31, 0x81	; 129
+ 4a6:	2f 2e       	mov	r2, r31
+ 4a8:	f1 e0       	ldi	r31, 0x01	; 1
+ 4aa:	3f 2e       	mov	r3, r31
+ 4ac:	f0 2d       	mov	r31, r0
+                        // you must sent a string starting with v
+                        if (verify_password((char *)&(buf[UDP_DATA_P]))){
+ 4ae:	a1 01       	movw	r20, r2
+ 4b0:	4d 5f       	subi	r20, 0xFD	; 253
+ 4b2:	5f 4f       	sbci	r21, 0xFF	; 255
+ 4b4:	58 a3       	std	Y+32, r21	; 0x20
+ 4b6:	4f 8f       	std	Y+31, r20	; 0x1f
+                                strcpy(str,"err=noSuchCmd");
+                                goto ANSWER;
+                        }
+                        strcpy(str,"err=invalid_pw");
+ANSWER:
+                        make_udp_reply_from_request(buf,str,strlen(str),1200);
+ 4b8:	3e 01       	movw	r6, r28
+ 4ba:	08 94       	sec
+ 4bc:	61 1c       	adc	r6, r1
+ 4be:	71 1c       	adc	r7, r1
+                                }
+                                // a command is one char and a value. At
+                                // least 3 characters long. It has an '=' on
+                                // position 2:
+                                if (cmd_pos<2 || cmd_pos>payloadlen-3 || buf[UDP_DATA_P+cmd_pos+1]!='='){
+                                        strcpy(str,"err=noCommand");
+ 4c0:	0f 2e       	mov	r0, r31
+ 4c2:	fe e0       	ldi	r31, 0x0E	; 14
+ 4c4:	ef 2e       	mov	r14, r31
+ 4c6:	f0 2d       	mov	r31, r0
+                // check if ip packets (icmp or udp) are for us:
+                if(eth_type_is_ip_and_my_ip(buf,plen)==0){
+                        continue;
+                }
+                
+                if(buf[IP_PROTO_P]==IP_PROTO_ICMP_V && buf[ICMP_TYPE_P]==ICMP_TYPE_ECHOREQUEST_V){
+ 4c8:	0f 2e       	mov	r0, r31
+ 4ca:	fc e7       	ldi	r31, 0x7C	; 124
+ 4cc:	af 2e       	mov	r10, r31
+ 4ce:	f1 e0       	ldi	r31, 0x01	; 1
+ 4d0:	bf 2e       	mov	r11, r31
+ 4d2:	f0 2d       	mov	r31, r0
+        init_ip_arp_udp(mymac,myip);
+		
+		sei();
+        while(1){
+                // get the next new packet:
+                plen = nicPoll(BUFFER_SIZE, buf);
+ 4d4:	8a ef       	ldi	r24, 0xFA	; 250
+ 4d6:	90 e0       	ldi	r25, 0x00	; 0
+ 4d8:	b8 01       	movw	r22, r16
+ 4da:	0e 94 d8 04 	call	0x9b0	; 0x9b0 <nicPoll>
+ 4de:	68 2f       	mov	r22, r24
+ 4e0:	79 2f       	mov	r23, r25
+
+                /*plen will be unequal to zero if there is a valid 
+                 * packet (without crc error) */
+                if(plen==0){
+ 4e2:	61 15       	cp	r22, r1
+ 4e4:	71 05       	cpc	r23, r1
+ 4e6:	b1 f3       	breq	.-20     	; 0x4d4 <main+0xae>
+                }
+                        
+                // arp is broadcast if unknown but a host may also
+                // verify the mac address by sending it to 
+                // a unicast address.
+                if(eth_type_is_arp_and_my_ip(buf,plen)){
+ 4e8:	f8 2e       	mov	r15, r24
+ 4ea:	c8 01       	movw	r24, r16
+ 4ec:	0e 94 ee 00 	call	0x1dc	; 0x1dc <eth_type_is_arp_and_my_ip>
+ 4f0:	88 23       	and	r24, r24
+ 4f2:	29 f0       	breq	.+10     	; 0x4fe <main+0xd8>
+                        make_arp_answer_from_request(buf,plen);
+ 4f4:	c8 01       	movw	r24, r16
+ 4f6:	6f 2d       	mov	r22, r15
+ 4f8:	0e 94 76 01 	call	0x2ec	; 0x2ec <make_arp_answer_from_request>
+                        continue;
+ 4fc:	eb cf       	rjmp	.-42     	; 0x4d4 <main+0xae>
+                }
+                // check if ip packets (icmp or udp) are for us:
+                if(eth_type_is_ip_and_my_ip(buf,plen)==0){
+ 4fe:	c8 01       	movw	r24, r16
+ 500:	6f 2d       	mov	r22, r15
+ 502:	0e 94 1a 01 	call	0x234	; 0x234 <eth_type_is_ip_and_my_ip>
+ 506:	88 23       	and	r24, r24
+ 508:	29 f3       	breq	.-54     	; 0x4d4 <main+0xae>
+                        continue;
+                }
+                
+                if(buf[IP_PROTO_P]==IP_PROTO_ICMP_V && buf[ICMP_TYPE_P]==ICMP_TYPE_ECHOREQUEST_V){
+ 50a:	f6 01       	movw	r30, r12
+ 50c:	80 81       	ld	r24, Z
+ 50e:	81 30       	cpi	r24, 0x01	; 1
+ 510:	49 f4       	brne	.+18     	; 0x524 <main+0xfe>
+ 512:	f5 01       	movw	r30, r10
+ 514:	80 81       	ld	r24, Z
+ 516:	88 30       	cpi	r24, 0x08	; 8
+ 518:	e9 f6       	brne	.-70     	; 0x4d4 <main+0xae>
+                        // a ping packet, let's send pong
+                        make_echo_reply_from_request(buf,plen);
+ 51a:	c8 01       	movw	r24, r16
+ 51c:	6f 2d       	mov	r22, r15
+ 51e:	0e 94 a0 01 	call	0x340	; 0x340 <make_echo_reply_from_request>
+                        continue;
+ 522:	d8 cf       	rjmp	.-80     	; 0x4d4 <main+0xae>
+                }
+                // we listen on port 1200=0x4B0
+                if (buf[IP_PROTO_P]==IP_PROTO_UDP_V&&buf[UDP_DST_PORT_H_P]==4&&buf[UDP_DST_PORT_L_P]==0xb0){
+ 524:	81 31       	cpi	r24, 0x11	; 17
+ 526:	b1 f6       	brne	.-84     	; 0x4d4 <main+0xae>
+ 528:	f4 01       	movw	r30, r8
+ 52a:	80 81       	ld	r24, Z
+ 52c:	84 30       	cpi	r24, 0x04	; 4
+ 52e:	91 f6       	brne	.-92     	; 0x4d4 <main+0xae>
+ 530:	f2 01       	movw	r30, r4
+ 532:	80 81       	ld	r24, Z
+ 534:	80 3b       	cpi	r24, 0xB0	; 176
+ 536:	71 f6       	brne	.-100    	; 0x4d4 <main+0xae>
+                        payloadlen=buf[UDP_LEN_L_P]-UDP_HEADER_LEN;
+ 538:	f1 01       	movw	r30, r2
+ 53a:	f0 80       	ld	r15, Z
+                        // you must sent a string starting with v
+                        if (verify_password((char *)&(buf[UDP_DATA_P]))){
+ 53c:	8f 8d       	ldd	r24, Y+31	; 0x1f
+ 53e:	98 a1       	ldd	r25, Y+32	; 0x20
+ 540:	0e 94 04 02 	call	0x408	; 0x408 <verify_password>
+ 544:	88 23       	and	r24, r24
+ 546:	71 f4       	brne	.+28     	; 0x564 <main+0x13e>
+ 548:	74 c0       	rjmp	.+232    	; 0x632 <main+0x20c>
+                                // find the first comma which indicates 
+                                // the start of a command:
+                                cmd_pos=0;
+                                while(cmd_pos<payloadlen){
+                                        cmd_pos++;
+ 54a:	2f 5f       	subi	r18, 0xFF	; 255
+                                        if (buf[UDP_DATA_P+cmd_pos]==','){
+ 54c:	f8 01       	movw	r30, r16
+ 54e:	e2 0f       	add	r30, r18
+ 550:	f1 1d       	adc	r31, r1
+ 552:	92 a5       	ldd	r25, Z+42	; 0x2a
+ 554:	9c 32       	cpi	r25, 0x2C	; 44
+ 556:	21 f0       	breq	.+8      	; 0x560 <main+0x13a>
+                        // you must sent a string starting with v
+                        if (verify_password((char *)&(buf[UDP_DATA_P]))){
+                                // find the first comma which indicates 
+                                // the start of a command:
+                                cmd_pos=0;
+                                while(cmd_pos<payloadlen){
+ 558:	28 17       	cp	r18, r24
+ 55a:	b8 f3       	brcs	.-18     	; 0x54a <main+0x124>
+ 55c:	0d c0       	rjmp	.+26     	; 0x578 <main+0x152>
+                                        cmd_pos++;
+ 55e:	21 e0       	ldi	r18, 0x01	; 1
+                                        if (buf[UDP_DATA_P+cmd_pos]==','){
+                                                cmd_pos++; // put on start of cmd
+ 560:	2f 5f       	subi	r18, 0xFF	; 255
+                                                break;
+ 562:	0a c0       	rjmp	.+20     	; 0x578 <main+0x152>
+                        make_echo_reply_from_request(buf,plen);
+                        continue;
+                }
+                // we listen on port 1200=0x4B0
+                if (buf[IP_PROTO_P]==IP_PROTO_UDP_V&&buf[UDP_DST_PORT_H_P]==4&&buf[UDP_DST_PORT_L_P]==0xb0){
+                        payloadlen=buf[UDP_LEN_L_P]-UDP_HEADER_LEN;
+ 564:	8f 2d       	mov	r24, r15
+ 566:	88 50       	subi	r24, 0x08	; 8
+                        // you must sent a string starting with v
+                        if (verify_password((char *)&(buf[UDP_DATA_P]))){
+                                // find the first comma which indicates 
+                                // the start of a command:
+                                cmd_pos=0;
+                                while(cmd_pos<payloadlen){
+ 568:	a9 f0       	breq	.+42     	; 0x594 <main+0x16e>
+                                        cmd_pos++;
+                                        if (buf[UDP_DATA_P+cmd_pos]==','){
+ 56a:	e5 e8       	ldi	r30, 0x85	; 133
+ 56c:	f1 e0       	ldi	r31, 0x01	; 1
+ 56e:	90 81       	ld	r25, Z
+ 570:	9c 32       	cpi	r25, 0x2C	; 44
+ 572:	a9 f3       	breq	.-22     	; 0x55e <main+0x138>
+                        if (verify_password((char *)&(buf[UDP_DATA_P]))){
+                                // find the first comma which indicates 
+                                // the start of a command:
+                                cmd_pos=0;
+                                while(cmd_pos<payloadlen){
+                                        cmd_pos++;
+ 574:	21 e0       	ldi	r18, 0x01	; 1
+ 576:	f0 cf       	rjmp	.-32     	; 0x558 <main+0x132>
+                                        }
+                                }
+                                // a command is one char and a value. At
+                                // least 3 characters long. It has an '=' on
+                                // position 2:
+                                if (cmd_pos<2 || cmd_pos>payloadlen-3 || buf[UDP_DATA_P+cmd_pos+1]!='='){
+ 578:	22 30       	cpi	r18, 0x02	; 2
+ 57a:	60 f0       	brcs	.+24     	; 0x594 <main+0x16e>
+ 57c:	30 e0       	ldi	r19, 0x00	; 0
+ 57e:	90 e0       	ldi	r25, 0x00	; 0
+ 580:	03 97       	sbiw	r24, 0x03	; 3
+ 582:	82 17       	cp	r24, r18
+ 584:	93 07       	cpc	r25, r19
+ 586:	34 f0       	brlt	.+12     	; 0x594 <main+0x16e>
+ 588:	f8 01       	movw	r30, r16
+ 58a:	e2 0f       	add	r30, r18
+ 58c:	f3 1f       	adc	r31, r19
+ 58e:	83 a5       	ldd	r24, Z+43	; 0x2b
+ 590:	8d 33       	cpi	r24, 0x3D	; 61
+ 592:	49 f0       	breq	.+18     	; 0x5a6 <main+0x180>
+                                        strcpy(str,"err=noCommand");
+ 594:	f3 01       	movw	r30, r6
+ 596:	a0 e0       	ldi	r26, 0x00	; 0
+ 598:	b1 e0       	ldi	r27, 0x01	; 1
+ 59a:	8e 2d       	mov	r24, r14
+ 59c:	0d 90       	ld	r0, X+
+ 59e:	01 92       	st	Z+, r0
+ 5a0:	81 50       	subi	r24, 0x01	; 1
+ 5a2:	e1 f7       	brne	.-8      	; 0x59c <main+0x176>
+ 5a4:	4e c0       	rjmp	.+156    	; 0x642 <main+0x21c>
+                                        goto ANSWER;
+                                }
+                                // supported commands are
+                                // c=0 c=1 c=2
+                                if (buf[UDP_DATA_P+cmd_pos]=='c'){
+ 5a6:	f8 01       	movw	r30, r16
+ 5a8:	e2 0f       	add	r30, r18
+ 5aa:	f3 1f       	adc	r31, r19
+ 5ac:	82 a5       	ldd	r24, Z+42	; 0x2a
+ 5ae:	83 36       	cpi	r24, 0x63	; 99
+ 5b0:	b9 f5       	brne	.+110    	; 0x620 <main+0x1fa>
+                                        cmdval=buf[UDP_DATA_P+cmd_pos+2];
+ 5b2:	f8 01       	movw	r30, r16
+ 5b4:	e2 0f       	add	r30, r18
+ 5b6:	f3 1f       	adc	r31, r19
+ 5b8:	84 a5       	ldd	r24, Z+44	; 0x2c
+										if(cmdval=='0'){
+ 5ba:	80 33       	cpi	r24, 0x30	; 48
+ 5bc:	51 f4       	brne	.+20     	; 0x5d2 <main+0x1ac>
+                                                PORTB &= ~(1<<PORTB6) ;//LED OFF
+ 5be:	c6 98       	cbi	0x18, 6	; 24
+                                                strcpy(str,"LED Is Off!");
+ 5c0:	f3 01       	movw	r30, r6
+ 5c2:	ae e0       	ldi	r26, 0x0E	; 14
+ 5c4:	b1 e0       	ldi	r27, 0x01	; 1
+ 5c6:	8c e0       	ldi	r24, 0x0C	; 12
+ 5c8:	0d 90       	ld	r0, X+
+ 5ca:	01 92       	st	Z+, r0
+ 5cc:	81 50       	subi	r24, 0x01	; 1
+ 5ce:	e1 f7       	brne	.-8      	; 0x5c8 <main+0x1a2>
+ 5d0:	38 c0       	rjmp	.+112    	; 0x642 <main+0x21c>
+                                                goto ANSWER;
+                                        }else if(cmdval=='1'){
+ 5d2:	81 33       	cpi	r24, 0x31	; 49
+ 5d4:	51 f4       	brne	.+20     	; 0x5ea <main+0x1c4>
+                                                PORTB |= _BV(PORTB6);//LED ON
+ 5d6:	c6 9a       	sbi	0x18, 6	; 24
+                                                strcpy(str,"LED Is On!");
+ 5d8:	f3 01       	movw	r30, r6
+ 5da:	aa e1       	ldi	r26, 0x1A	; 26
+ 5dc:	b1 e0       	ldi	r27, 0x01	; 1
+ 5de:	8b e0       	ldi	r24, 0x0B	; 11
+ 5e0:	0d 90       	ld	r0, X+
+ 5e2:	01 92       	st	Z+, r0
+ 5e4:	81 50       	subi	r24, 0x01	; 1
+ 5e6:	e1 f7       	brne	.-8      	; 0x5e0 <main+0x1ba>
+ 5e8:	2c c0       	rjmp	.+88     	; 0x642 <main+0x21c>
+                                                goto ANSWER;
+                                        }else if(cmdval=='2'){
+ 5ea:	82 33       	cpi	r24, 0x32	; 50
+ 5ec:	c9 f4       	brne	.+50     	; 0x620 <main+0x1fa>
+												ADCSRA = (1<<ADEN) | (1<<ADSC) | (1<<ADPS2) | (1<<ADPS1) | (1<<ADPS0);		
+ 5ee:	f7 ec       	ldi	r31, 0xC7	; 199
+ 5f0:	f6 b9       	out	0x06, r31	; 6
+											    while (ADCSRA & (1<<ADSC));
+ 5f2:	36 99       	sbic	0x06, 6	; 6
+ 5f4:	fe cf       	rjmp	.-4      	; 0x5f2 <main+0x1cc>
+												result=ADC;
+ 5f6:	84 b1       	in	r24, 0x04	; 4
+ 5f8:	95 b1       	in	r25, 0x05	; 5
+											    itoa((result*400)/1024,str,10);
+ 5fa:	40 e9       	ldi	r20, 0x90	; 144
+ 5fc:	51 e0       	ldi	r21, 0x01	; 1
+ 5fe:	84 9f       	mul	r24, r20
+ 600:	90 01       	movw	r18, r0
+ 602:	85 9f       	mul	r24, r21
+ 604:	30 0d       	add	r19, r0
+ 606:	94 9f       	mul	r25, r20
+ 608:	30 0d       	add	r19, r0
+ 60a:	11 24       	eor	r1, r1
+ 60c:	83 2f       	mov	r24, r19
+ 60e:	86 95       	lsr	r24
+ 610:	86 95       	lsr	r24
+ 612:	90 e0       	ldi	r25, 0x00	; 0
+ 614:	b3 01       	movw	r22, r6
+ 616:	4a e0       	ldi	r20, 0x0A	; 10
+ 618:	50 e0       	ldi	r21, 0x00	; 0
+ 61a:	0e 94 bc 05 	call	0xb78	; 0xb78 <itoa>
+                                                goto ANSWER;		
+ 61e:	11 c0       	rjmp	.+34     	; 0x642 <main+0x21c>
+                                        }
+                                }
+                                strcpy(str,"err=noSuchCmd");
+ 620:	f3 01       	movw	r30, r6
+ 622:	a5 e2       	ldi	r26, 0x25	; 37
+ 624:	b1 e0       	ldi	r27, 0x01	; 1
+ 626:	8e 2d       	mov	r24, r14
+ 628:	0d 90       	ld	r0, X+
+ 62a:	01 92       	st	Z+, r0
+ 62c:	81 50       	subi	r24, 0x01	; 1
+ 62e:	e1 f7       	brne	.-8      	; 0x628 <main+0x202>
+ 630:	08 c0       	rjmp	.+16     	; 0x642 <main+0x21c>
+                                goto ANSWER;
+                        }
+                        strcpy(str,"err=invalid_pw");
+ 632:	f3 01       	movw	r30, r6
+ 634:	a3 e3       	ldi	r26, 0x33	; 51
+ 636:	b1 e0       	ldi	r27, 0x01	; 1
+ 638:	8f e0       	ldi	r24, 0x0F	; 15
+ 63a:	0d 90       	ld	r0, X+
+ 63c:	01 92       	st	Z+, r0
+ 63e:	81 50       	subi	r24, 0x01	; 1
+ 640:	e1 f7       	brne	.-8      	; 0x63a <main+0x214>
+ANSWER:
+                        make_udp_reply_from_request(buf,str,strlen(str),1200);
+ 642:	f3 01       	movw	r30, r6
+ 644:	01 90       	ld	r0, Z+
+ 646:	00 20       	and	r0, r0
+ 648:	e9 f7       	brne	.-6      	; 0x644 <main+0x21e>
+ 64a:	31 97       	sbiw	r30, 0x01	; 1
+ 64c:	af 01       	movw	r20, r30
+ 64e:	46 19       	sub	r20, r6
+ 650:	57 09       	sbc	r21, r7
+ 652:	c8 01       	movw	r24, r16
+ 654:	b3 01       	movw	r22, r6
+ 656:	20 eb       	ldi	r18, 0xB0	; 176
+ 658:	34 e0       	ldi	r19, 0x04	; 4
+ 65a:	0e 94 bd 01 	call	0x37a	; 0x37a <make_udp_reply_from_request>
+ 65e:	3a cf       	rjmp	.-396    	; 0x4d4 <main+0xae>
+
+00000660 <rtl8019SetupPorts>:
+    MCUCR |= _BV(SRE);*/
+
+#endif
+
+	// enable output pin for Resetting the RTL8019
+	RTL8019_RESET_DDR |= RTL8019_RESET_PIN;
+ 660:	82 b1       	in	r24, 0x02	; 2
+ 662:	83 60       	ori	r24, 0x03	; 3
+ 664:	82 b9       	out	0x02, r24	; 2
+}
+ 666:	08 95       	ret
+
+00000668 <nicGetMacAddress>:
+		
+	return packetLength;
+}
+
+void nicGetMacAddress(u08* macaddr)
+{
+ 668:	cf 93       	push	r28
+ 66a:	df 93       	push	r29
+	u08 tempCR;
+	// switch register pages
+	tempCR = rtl8019Read(CR);
+ 66c:	a0 e0       	ldi	r26, 0x00	; 0
+ 66e:	b3 e2       	ldi	r27, 0x23	; 35
+ 670:	2c 91       	ld	r18, X
+	rtl8019Write(CR,tempCR|PS0);
+ 672:	32 2f       	mov	r19, r18
+ 674:	30 64       	ori	r19, 0x40	; 64
+ 676:	3c 93       	st	X, r19
+	// read MAC address registers
+	*macaddr++ = rtl8019Read(PAR0);
+ 678:	30 91 01 23 	lds	r19, 0x2301
+ 67c:	fc 01       	movw	r30, r24
+ 67e:	31 93       	st	Z+, r19
+	*macaddr++ = rtl8019Read(PAR1);
+ 680:	30 91 02 23 	lds	r19, 0x2302
+ 684:	ec 01       	movw	r28, r24
+ 686:	39 83       	std	Y+1, r19	; 0x01
+ 688:	ef 01       	movw	r28, r30
+ 68a:	21 96       	adiw	r28, 0x01	; 1
+	*macaddr++ = rtl8019Read(PAR2);
+ 68c:	80 91 03 23 	lds	r24, 0x2303
+ 690:	81 83       	std	Z+1, r24	; 0x01
+ 692:	fe 01       	movw	r30, r28
+ 694:	31 96       	adiw	r30, 0x01	; 1
+	*macaddr++ = rtl8019Read(PAR3);
+ 696:	80 91 04 23 	lds	r24, 0x2304
+ 69a:	89 83       	std	Y+1, r24	; 0x01
+	*macaddr++ = rtl8019Read(PAR4);
+ 69c:	80 91 05 23 	lds	r24, 0x2305
+ 6a0:	81 83       	std	Z+1, r24	; 0x01
+	*macaddr++ = rtl8019Read(PAR5);
+ 6a2:	80 91 06 23 	lds	r24, 0x2306
+ 6a6:	82 83       	std	Z+2, r24	; 0x02
+	// switch register pages back
+	rtl8019Write(CR,tempCR);
+ 6a8:	2c 93       	st	X, r18
+}
+ 6aa:	df 91       	pop	r29
+ 6ac:	cf 91       	pop	r28
+ 6ae:	08 95       	ret
+
+000006b0 <nicSetMacAddress>:
+
+void nicSetMacAddress(u08* macaddr)
+{
+ 6b0:	cf 93       	push	r28
+ 6b2:	df 93       	push	r29
+	u08 tempCR;
+	// switch register pages
+	tempCR = rtl8019Read(CR);
+ 6b4:	a0 e0       	ldi	r26, 0x00	; 0
+ 6b6:	b3 e2       	ldi	r27, 0x23	; 35
+ 6b8:	2c 91       	ld	r18, X
+	rtl8019Write(CR,tempCR|PS0);
+ 6ba:	32 2f       	mov	r19, r18
+ 6bc:	30 64       	ori	r19, 0x40	; 64
+ 6be:	3c 93       	st	X, r19
+	// write MAC address registers
+	rtl8019Write(PAR0, *macaddr++);
+ 6c0:	fc 01       	movw	r30, r24
+ 6c2:	31 91       	ld	r19, Z+
+ 6c4:	30 93 01 23 	sts	0x2301, r19
+	rtl8019Write(PAR1, *macaddr++);
+ 6c8:	ec 01       	movw	r28, r24
+ 6ca:	89 81       	ldd	r24, Y+1	; 0x01
+ 6cc:	80 93 02 23 	sts	0x2302, r24
+ 6d0:	ef 01       	movw	r28, r30
+ 6d2:	21 96       	adiw	r28, 0x01	; 1
+	rtl8019Write(PAR2, *macaddr++);
+ 6d4:	81 81       	ldd	r24, Z+1	; 0x01
+ 6d6:	80 93 03 23 	sts	0x2303, r24
+ 6da:	fe 01       	movw	r30, r28
+ 6dc:	31 96       	adiw	r30, 0x01	; 1
+	rtl8019Write(PAR3, *macaddr++);
+ 6de:	89 81       	ldd	r24, Y+1	; 0x01
+ 6e0:	80 93 04 23 	sts	0x2304, r24
+	rtl8019Write(PAR4, *macaddr++);
+ 6e4:	81 81       	ldd	r24, Z+1	; 0x01
+ 6e6:	80 93 05 23 	sts	0x2305, r24
+	rtl8019Write(PAR5, *macaddr++);
+ 6ea:	82 81       	ldd	r24, Z+2	; 0x02
+ 6ec:	80 93 06 23 	sts	0x2306, r24
+	// switch register pages back
+	rtl8019Write(CR,tempCR);
+ 6f0:	2c 93       	st	X, r18
+}
+ 6f2:	df 91       	pop	r29
+ 6f4:	cf 91       	pop	r28
+ 6f6:	08 95       	ret
+
+000006f8 <rtl8019BeginPacketSend>:
+
+
+void rtl8019BeginPacketSend(unsigned int packetLength)
+{
+	unsigned int sendPacketLength;
+	sendPacketLength = (packetLength>=ETHERNET_MIN_PACKET_LENGTH)?
+ 6f8:	28 2f       	mov	r18, r24
+ 6fa:	39 2f       	mov	r19, r25
+ 6fc:	2c 33       	cpi	r18, 0x3C	; 60
+ 6fe:	31 05       	cpc	r19, r1
+ 700:	10 f4       	brcc	.+4      	; 0x706 <rtl8019BeginPacketSend+0xe>
+ 702:	2c e3       	ldi	r18, 0x3C	; 60
+ 704:	30 e0       	ldi	r19, 0x00	; 0
+						(packetLength):ETHERNET_MIN_PACKET_LENGTH;
+	
+	//start the NIC
+	rtl8019Write(CR, (RD2|START));
+ 706:	42 e2       	ldi	r20, 0x22	; 34
+ 708:	40 93 00 23 	sts	0x2300, r20
+	
+	// still transmitting a packet - wait for it to finish
+	while( rtl8019Read(CR) & TXP );
+ 70c:	e0 e0       	ldi	r30, 0x00	; 0
+ 70e:	f3 e2       	ldi	r31, 0x23	; 35
+ 710:	40 81       	ld	r20, Z
+ 712:	42 fd       	sbrc	r20, 2
+ 714:	fd cf       	rjmp	.-6      	; 0x710 <rtl8019BeginPacketSend+0x18>
+
+	// load beginning page for transmit buffer
+	rtl8019Write(TPSR,TXSTART_INIT);
+ 716:	40 e4       	ldi	r20, 0x40	; 64
+ 718:	40 93 04 23 	sts	0x2304, r20
+	
+	// set start address for remote DMA operation
+	rtl8019Write(RSAR0,0x00);
+ 71c:	10 92 08 23 	sts	0x2308, r1
+	rtl8019Write(RSAR1,0x40);
+ 720:	40 93 09 23 	sts	0x2309, r20
+	
+	// clear the packet stored interrupt
+	rtl8019Write(ISRR,PTX);
+ 724:	42 e0       	ldi	r20, 0x02	; 2
+ 726:	40 93 07 23 	sts	0x2307, r20
+
+	// load data byte count for remote DMA
+	rtl8019Write(RBCR0, (unsigned char)(packetLength));
+ 72a:	80 93 0a 23 	sts	0x230A, r24
+	rtl8019Write(RBCR1, (unsigned char)(packetLength>>8));
+ 72e:	90 93 0b 23 	sts	0x230B, r25
+
+	rtl8019Write(TBCR0, (unsigned char)(sendPacketLength));
+ 732:	20 93 05 23 	sts	0x2305, r18
+	rtl8019Write(TBCR1, (unsigned char)((sendPacketLength)>>8));
+ 736:	30 93 06 23 	sts	0x2306, r19
+	
+	// do remote write operation
+	rtl8019Write(CR,(RD1|START));
+ 73a:	82 e1       	ldi	r24, 0x12	; 18
+ 73c:	80 93 00 23 	sts	0x2300, r24
+}
+ 740:	08 95       	ret
+
+00000742 <rtl8019SendPacketData>:
+void rtl8019SendPacketData(unsigned char * localBuffer, unsigned int length)
+{
+	unsigned int i;
+	
+	// write data to DMA port
+	for(i=0;i<length;i++)
+ 742:	61 15       	cp	r22, r1
+ 744:	71 05       	cpc	r23, r1
+ 746:	61 f0       	breq	.+24     	; 0x760 <rtl8019SendPacketData+0x1e>
+ 748:	e8 2f       	mov	r30, r24
+ 74a:	f9 2f       	mov	r31, r25
+ 74c:	80 e0       	ldi	r24, 0x00	; 0
+ 74e:	90 e0       	ldi	r25, 0x00	; 0
+		rtl8019Write(RDMAPORT, localBuffer[i]);
+ 750:	a0 e1       	ldi	r26, 0x10	; 16
+ 752:	b3 e2       	ldi	r27, 0x23	; 35
+ 754:	21 91       	ld	r18, Z+
+ 756:	2c 93       	st	X, r18
+void rtl8019SendPacketData(unsigned char * localBuffer, unsigned int length)
+{
+	unsigned int i;
+	
+	// write data to DMA port
+	for(i=0;i<length;i++)
+ 758:	01 96       	adiw	r24, 0x01	; 1
+ 75a:	86 17       	cp	r24, r22
+ 75c:	97 07       	cpc	r25, r23
+ 75e:	d0 f3       	brcs	.-12     	; 0x754 <rtl8019SendPacketData+0x12>
+ 760:	08 95       	ret
+
+00000762 <rtl8019EndPacketSend>:
+
+
+void rtl8019EndPacketSend(void)
+{
+	//send the contents of the transmit buffer onto the network
+	rtl8019Write(CR,(RD2|TXP));
+ 762:	84 e2       	ldi	r24, 0x24	; 36
+ 764:	80 93 00 23 	sts	0x2300, r24
+	// clear the remote DMA interrupt
+	rtl8019Write(ISRR, RDC);
+ 768:	80 e4       	ldi	r24, 0x40	; 64
+ 76a:	80 93 07 23 	sts	0x2307, r24
+}
+ 76e:	08 95       	ret
+
+00000770 <nicSend>:
+{
+	rtl8019Init();
+}
+
+void nicSend(unsigned int len, unsigned char* packet)
+{
+ 770:	0f 93       	push	r16
+ 772:	1f 93       	push	r17
+ 774:	cf 93       	push	r28
+ 776:	df 93       	push	r29
+ 778:	ec 01       	movw	r28, r24
+ 77a:	8b 01       	movw	r16, r22
+	rtl8019BeginPacketSend(len);
+ 77c:	0e 94 7c 03 	call	0x6f8	; 0x6f8 <rtl8019BeginPacketSend>
+	rtl8019SendPacketData(packet, len);
+ 780:	c8 01       	movw	r24, r16
+ 782:	be 01       	movw	r22, r28
+ 784:	0e 94 a1 03 	call	0x742	; 0x742 <rtl8019SendPacketData>
+	rtl8019EndPacketSend();
+ 788:	0e 94 b1 03 	call	0x762	; 0x762 <rtl8019EndPacketSend>
+}
+ 78c:	df 91       	pop	r29
+ 78e:	cf 91       	pop	r28
+ 790:	1f 91       	pop	r17
+ 792:	0f 91       	pop	r16
+ 794:	08 95       	ret
+
+00000796 <rtl8019RetreivePacketData>:
+void rtl8019RetreivePacketData(unsigned char * localBuffer, unsigned int length)
+{
+	unsigned int i;
+	
+	// initiate DMA to transfer the data
+	rtl8019Write(RBCR0, (unsigned char)length);
+ 796:	60 93 0a 23 	sts	0x230A, r22
+	rtl8019Write(RBCR1, (unsigned char)(length>>8));
+ 79a:	70 93 0b 23 	sts	0x230B, r23
+	rtl8019Write(RSAR0, (unsigned char)CurrentRetreiveAddress);
+ 79e:	20 91 56 02 	lds	r18, 0x0256
+ 7a2:	30 91 57 02 	lds	r19, 0x0257
+ 7a6:	20 93 08 23 	sts	0x2308, r18
+	rtl8019Write(RSAR1, (unsigned char)(CurrentRetreiveAddress>>8));
+ 7aa:	30 93 09 23 	sts	0x2309, r19
+	rtl8019Write(CR, (RD0|START));
+ 7ae:	4a e0       	ldi	r20, 0x0A	; 10
+ 7b0:	40 93 00 23 	sts	0x2300, r20
+	// transfer packet data
+	for(i=0;i<length;i++)
+ 7b4:	61 15       	cp	r22, r1
+ 7b6:	71 05       	cpc	r23, r1
+ 7b8:	61 f0       	breq	.+24     	; 0x7d2 <rtl8019RetreivePacketData+0x3c>
+ 7ba:	e8 2f       	mov	r30, r24
+ 7bc:	f9 2f       	mov	r31, r25
+ 7be:	80 e0       	ldi	r24, 0x00	; 0
+ 7c0:	90 e0       	ldi	r25, 0x00	; 0
+		localBuffer[i] = rtl8019Read(RDMAPORT);
+ 7c2:	a0 e1       	ldi	r26, 0x10	; 16
+ 7c4:	b3 e2       	ldi	r27, 0x23	; 35
+ 7c6:	4c 91       	ld	r20, X
+ 7c8:	41 93       	st	Z+, r20
+	rtl8019Write(RBCR1, (unsigned char)(length>>8));
+	rtl8019Write(RSAR0, (unsigned char)CurrentRetreiveAddress);
+	rtl8019Write(RSAR1, (unsigned char)(CurrentRetreiveAddress>>8));
+	rtl8019Write(CR, (RD0|START));
+	// transfer packet data
+	for(i=0;i<length;i++)
+ 7ca:	01 96       	adiw	r24, 0x01	; 1
+ 7cc:	86 17       	cp	r24, r22
+ 7ce:	97 07       	cpc	r25, r23
+ 7d0:	d0 f3       	brcs	.-12     	; 0x7c6 <rtl8019RetreivePacketData+0x30>
+		localBuffer[i] = rtl8019Read(RDMAPORT);
+	// end the DMA operation
+	rtl8019Write(CR, (RD2|START));
+ 7d2:	82 e2       	ldi	r24, 0x22	; 34
+ 7d4:	80 93 00 23 	sts	0x2300, r24
+	// wait for remote DMA complete
+	for(i=0; i<20; i++)
+		if(rtl8019Read(ISRR) & RDC)
+ 7d8:	80 91 07 23 	lds	r24, 0x2307
+ 7dc:	86 fd       	sbrc	r24, 6
+ 7de:	0b c0       	rjmp	.+22     	; 0x7f6 <rtl8019RetreivePacketData+0x60>
+	for(i=0;i<length;i++)
+		localBuffer[i] = rtl8019Read(RDMAPORT);
+	// end the DMA operation
+	rtl8019Write(CR, (RD2|START));
+	// wait for remote DMA complete
+	for(i=0; i<20; i++)
+ 7e0:	81 e0       	ldi	r24, 0x01	; 1
+ 7e2:	90 e0       	ldi	r25, 0x00	; 0
+		if(rtl8019Read(ISRR) & RDC)
+ 7e4:	e7 e0       	ldi	r30, 0x07	; 7
+ 7e6:	f3 e2       	ldi	r31, 0x23	; 35
+ 7e8:	40 81       	ld	r20, Z
+ 7ea:	46 fd       	sbrc	r20, 6
+ 7ec:	04 c0       	rjmp	.+8      	; 0x7f6 <rtl8019RetreivePacketData+0x60>
+	for(i=0;i<length;i++)
+		localBuffer[i] = rtl8019Read(RDMAPORT);
+	// end the DMA operation
+	rtl8019Write(CR, (RD2|START));
+	// wait for remote DMA complete
+	for(i=0; i<20; i++)
+ 7ee:	01 96       	adiw	r24, 0x01	; 1
+ 7f0:	84 31       	cpi	r24, 0x14	; 20
+ 7f2:	91 05       	cpc	r25, r1
+ 7f4:	c9 f7       	brne	.-14     	; 0x7e8 <rtl8019RetreivePacketData+0x52>
+		if(rtl8019Read(ISRR) & RDC)
+			break;
+	rtl8019Write(ISRR, RDC);
+ 7f6:	80 e4       	ldi	r24, 0x40	; 64
+ 7f8:	80 93 07 23 	sts	0x2307, r24
+	// keep track of current address
+    CurrentRetreiveAddress += length;
+ 7fc:	62 0f       	add	r22, r18
+ 7fe:	73 1f       	adc	r23, r19
+ 800:	70 93 57 02 	sts	0x0257, r23
+ 804:	60 93 56 02 	sts	0x0256, r22
+    if( CurrentRetreiveAddress >= 0x6000 )
+ 808:	80 e6       	ldi	r24, 0x60	; 96
+ 80a:	60 30       	cpi	r22, 0x00	; 0
+ 80c:	78 07       	cpc	r23, r24
+ 80e:	30 f0       	brcs	.+12     	; 0x81c <rtl8019RetreivePacketData+0x86>
+    	CurrentRetreiveAddress = CurrentRetreiveAddress - (0x6000-0x4600) ;
+ 810:	60 50       	subi	r22, 0x00	; 0
+ 812:	7a 41       	sbci	r23, 0x1A	; 26
+ 814:	70 93 57 02 	sts	0x0257, r23
+ 818:	60 93 56 02 	sts	0x0256, r22
+ 81c:	08 95       	ret
+
+0000081e <rtl8019EndPacketRetreive>:
+void rtl8019EndPacketRetreive(void)
+{
+	unsigned char i;
+
+	// end the DMA operation
+	rtl8019Write(CR, (RD2|START));
+ 81e:	82 e2       	ldi	r24, 0x22	; 34
+ 820:	80 93 00 23 	sts	0x2300, r24
+	// wait for remote DMA complete
+	for(i=0; i<20; i++)
+		if(rtl8019Read(ISRR) & RDC)
+ 824:	80 91 07 23 	lds	r24, 0x2307
+ 828:	86 fd       	sbrc	r24, 6
+ 82a:	08 c0       	rjmp	.+16     	; 0x83c <rtl8019EndPacketRetreive+0x1e>
+ 82c:	83 e1       	ldi	r24, 0x13	; 19
+ 82e:	e7 e0       	ldi	r30, 0x07	; 7
+ 830:	f3 e2       	ldi	r31, 0x23	; 35
+ 832:	90 81       	ld	r25, Z
+ 834:	96 fd       	sbrc	r25, 6
+ 836:	02 c0       	rjmp	.+4      	; 0x83c <rtl8019EndPacketRetreive+0x1e>
+ 838:	81 50       	subi	r24, 0x01	; 1
+	unsigned char i;
+
+	// end the DMA operation
+	rtl8019Write(CR, (RD2|START));
+	// wait for remote DMA complete
+	for(i=0; i<20; i++)
+ 83a:	d9 f7       	brne	.-10     	; 0x832 <rtl8019EndPacketRetreive+0x14>
+		if(rtl8019Read(ISRR) & RDC)
+			break;
+	rtl8019Write(ISRR, RDC);
+ 83c:	80 e4       	ldi	r24, 0x40	; 64
+ 83e:	80 93 07 23 	sts	0x2307, r24
+
+	// set the boundary register to point to the start of the next packet
+	rtl8019Write(BNRY, NextPage);
+ 842:	80 91 55 02 	lds	r24, 0x0255
+ 846:	80 93 03 23 	sts	0x2303, r24
+}
+ 84a:	08 95       	ret
+
+0000084c <rtl8019Overrun>:
+		rtl8019Overrun();
+}
+
+
+void rtl8019Overrun(void)
+{
+ 84c:	cf 93       	push	r28
+ 84e:	df 93       	push	r29
+	unsigned char data_L, resend;	
+
+	data_L = rtl8019Read(CR);
+ 850:	e0 e0       	ldi	r30, 0x00	; 0
+ 852:	f3 e2       	ldi	r31, 0x23	; 35
+ 854:	80 81       	ld	r24, Z
+	rtl8019Write(CR, 0x21);
+ 856:	91 e2       	ldi	r25, 0x21	; 33
+ 858:	90 83       	st	Z, r25
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 85a:	e3 ef       	ldi	r30, 0xF3	; 243
+ 85c:	f1 e0       	ldi	r31, 0x01	; 1
+ 85e:	31 97       	sbiw	r30, 0x01	; 1
+ 860:	f1 f7       	brne	.-4      	; 0x85e <rtl8019Overrun+0x12>
+ 862:	00 c0       	rjmp	.+0      	; 0x864 <rtl8019Overrun+0x18>
+ 864:	00 00       	nop
+	_delay_ms(2);
+	rtl8019Write(RBCR0, 0x00);
+ 866:	10 92 0a 23 	sts	0x230A, r1
+	rtl8019Write(RBCR1, 0x00);
+ 86a:	10 92 0b 23 	sts	0x230B, r1
+	if(!(data_L & 0x04))
+ 86e:	82 ff       	sbrs	r24, 2
+ 870:	21 c0       	rjmp	.+66     	; 0x8b4 <rtl8019Overrun+0x68>
+		resend = 0;
+	else if(data_L & 0x04)
+	{
+		data_L = rtl8019Read(ISRR);
+ 872:	e7 e0       	ldi	r30, 0x07	; 7
+ 874:	f3 e2       	ldi	r31, 0x23	; 35
+ 876:	20 81       	ld	r18, Z
+	    	resend = 0;
+	    else
+	    	resend = 1;
+	}
+	
+	rtl8019Write(TCR, 0x02);
+ 878:	cd e0       	ldi	r28, 0x0D	; 13
+ 87a:	d3 e2       	ldi	r29, 0x23	; 35
+ 87c:	82 e0       	ldi	r24, 0x02	; 2
+ 87e:	88 83       	st	Y, r24
+	rtl8019Write(CR, 0x22);
+ 880:	a0 e0       	ldi	r26, 0x00	; 0
+ 882:	b3 e2       	ldi	r27, 0x23	; 35
+ 884:	82 e2       	ldi	r24, 0x22	; 34
+ 886:	8c 93       	st	X, r24
+	rtl8019Write(BNRY, RXSTART_INIT);
+ 888:	96 e4       	ldi	r25, 0x46	; 70
+ 88a:	90 93 03 23 	sts	0x2303, r25
+	rtl8019Write(CR, 0x62);
+ 88e:	32 e6       	ldi	r19, 0x62	; 98
+ 890:	3c 93       	st	X, r19
+	rtl8019Write(CPR, RXSTART_INIT);
+ 892:	90 83       	st	Z, r25
+	rtl8019Write(CR, 0x22);
+ 894:	8c 93       	st	X, r24
+	rtl8019Write(ISRR, 0x10);
+ 896:	80 e1       	ldi	r24, 0x10	; 16
+ 898:	80 83       	st	Z, r24
+	rtl8019Write(TCR, TCR_INIT);
+ 89a:	18 82       	st	Y, r1
+	if( byte & OVW )
+		rtl8019Overrun();
+}
+
+
+void rtl8019Overrun(void)
+ 89c:	82 2f       	mov	r24, r18
+ 89e:	8a 70       	andi	r24, 0x0A	; 10
+	rtl8019Write(CPR, RXSTART_INIT);
+	rtl8019Write(CR, 0x22);
+	rtl8019Write(ISRR, 0x10);
+	rtl8019Write(TCR, TCR_INIT);
+	
+    if(resend)
+ 8a0:	19 f4       	brne	.+6      	; 0x8a8 <rtl8019Overrun+0x5c>
+        rtl8019Write(CR, 0x26);
+ 8a2:	86 e2       	ldi	r24, 0x26	; 38
+ 8a4:	80 93 00 23 	sts	0x2300, r24
+
+    rtl8019Write(ISRR, 0xFF);
+ 8a8:	8f ef       	ldi	r24, 0xFF	; 255
+ 8aa:	80 93 07 23 	sts	0x2307, r24
+}
+ 8ae:	df 91       	pop	r29
+ 8b0:	cf 91       	pop	r28
+ 8b2:	08 95       	ret
+	    	resend = 0;
+	    else
+	    	resend = 1;
+	}
+	
+	rtl8019Write(TCR, 0x02);
+ 8b4:	ad e0       	ldi	r26, 0x0D	; 13
+ 8b6:	b3 e2       	ldi	r27, 0x23	; 35
+ 8b8:	82 e0       	ldi	r24, 0x02	; 2
+ 8ba:	8c 93       	st	X, r24
+	rtl8019Write(CR, 0x22);
+ 8bc:	e0 e0       	ldi	r30, 0x00	; 0
+ 8be:	f3 e2       	ldi	r31, 0x23	; 35
+ 8c0:	82 e2       	ldi	r24, 0x22	; 34
+ 8c2:	80 83       	st	Z, r24
+	rtl8019Write(BNRY, RXSTART_INIT);
+ 8c4:	96 e4       	ldi	r25, 0x46	; 70
+ 8c6:	90 93 03 23 	sts	0x2303, r25
+	rtl8019Write(CR, 0x62);
+ 8ca:	22 e6       	ldi	r18, 0x62	; 98
+ 8cc:	20 83       	st	Z, r18
+	rtl8019Write(CPR, RXSTART_INIT);
+ 8ce:	c7 e0       	ldi	r28, 0x07	; 7
+ 8d0:	d3 e2       	ldi	r29, 0x23	; 35
+ 8d2:	98 83       	st	Y, r25
+	rtl8019Write(CR, 0x22);
+ 8d4:	80 83       	st	Z, r24
+	rtl8019Write(ISRR, 0x10);
+ 8d6:	80 e1       	ldi	r24, 0x10	; 16
+ 8d8:	88 83       	st	Y, r24
+	rtl8019Write(TCR, TCR_INIT);
+ 8da:	1c 92       	st	X, r1
+ 8dc:	e5 cf       	rjmp	.-54     	; 0x8a8 <rtl8019Overrun+0x5c>
+
+000008de <rtl8019ProcessInterrupt>:
+	rtl8019Write(BNRY, NextPage);
+}
+
+void rtl8019ProcessInterrupt(void)
+{
+	unsigned char byte = rtl8019Read(ISRR);
+ 8de:	80 91 07 23 	lds	r24, 0x2307
+	
+	if( byte & OVW )
+ 8e2:	84 ff       	sbrs	r24, 4
+ 8e4:	02 c0       	rjmp	.+4      	; 0x8ea <rtl8019ProcessInterrupt+0xc>
+		rtl8019Overrun();
+ 8e6:	0e 94 26 04 	call	0x84c	; 0x84c <rtl8019Overrun>
+ 8ea:	08 95       	ret
+
+000008ec <rtl8019BeginPacketRetreive>:
+	
+	unsigned char pageheader[4];
+	unsigned int rxlen;
+	
+	// check for and handle an overflow
+	rtl8019ProcessInterrupt();
+ 8ec:	0e 94 6f 04 	call	0x8de	; 0x8de <rtl8019ProcessInterrupt>
+	
+	// read CPR from page 1
+	rtl8019Write(CR,(PS0|RD2|START));
+ 8f0:	e0 e0       	ldi	r30, 0x00	; 0
+ 8f2:	f3 e2       	ldi	r31, 0x23	; 35
+ 8f4:	82 e6       	ldi	r24, 0x62	; 98
+ 8f6:	80 83       	st	Z, r24
+	i = rtl8019Read(CPR);
+ 8f8:	80 91 07 23 	lds	r24, 0x2307
+	
+	// return to page 0
+	rtl8019Write(CR,(RD2|START));
+ 8fc:	92 e2       	ldi	r25, 0x22	; 34
+ 8fe:	90 83       	st	Z, r25
+	
+	// read the boundary register - pointing to the beginning of the packet
+	bnry = rtl8019Read(BNRY) ;
+ 900:	20 91 03 23 	lds	r18, 0x2303
+	
+	// return if there is no packet in the buffer
+	if( bnry == i )
+ 904:	28 17       	cp	r18, r24
+ 906:	09 f4       	brne	.+2      	; 0x90a <rtl8019BeginPacketRetreive+0x1e>
+ 908:	4b c0       	rjmp	.+150    	; 0x9a0 <rtl8019BeginPacketRetreive+0xb4>
+		return 0;
+
+	// clear the packet received interrupt flag
+	rtl8019Write(ISRR, PRX);
+ 90a:	81 e0       	ldi	r24, 0x01	; 1
+ 90c:	80 93 07 23 	sts	0x2307, r24
+	
+	// if boundary pointer is invalid
+	if( (bnry >= RXSTOP_INIT) || (bnry < RXSTART_INIT) )
+ 910:	82 2f       	mov	r24, r18
+ 912:	86 54       	subi	r24, 0x46	; 70
+ 914:	8a 31       	cpi	r24, 0x1A	; 26
+ 916:	60 f0       	brcs	.+24     	; 0x930 <rtl8019BeginPacketRetreive+0x44>
+	{
+		// reset the contents of the buffer and exit
+		rtl8019Write(BNRY, RXSTART_INIT);
+ 918:	86 e4       	ldi	r24, 0x46	; 70
+ 91a:	80 93 03 23 	sts	0x2303, r24
+		rtl8019Write(CR, (PS0|RD2|START));
+ 91e:	92 e6       	ldi	r25, 0x62	; 98
+ 920:	90 83       	st	Z, r25
+		rtl8019Write(CPR, RXSTART_INIT);
+ 922:	80 93 07 23 	sts	0x2307, r24
+		rtl8019Write(CR, (RD2|START));
+ 926:	82 e2       	ldi	r24, 0x22	; 34
+ 928:	80 83       	st	Z, r24
+		return 0;
+ 92a:	20 e0       	ldi	r18, 0x00	; 0
+ 92c:	30 e0       	ldi	r19, 0x00	; 0
+ 92e:	3d c0       	rjmp	.+122    	; 0x9aa <rtl8019BeginPacketRetreive+0xbe>
+	}
+
+	// initiate DMA to transfer the RTL8019 packet header
+	rtl8019Write(RBCR0, 4);
+ 930:	84 e0       	ldi	r24, 0x04	; 4
+ 932:	80 93 0a 23 	sts	0x230A, r24
+	rtl8019Write(RBCR1, 0);
+ 936:	10 92 0b 23 	sts	0x230B, r1
+	rtl8019Write(RSAR0, 0);
+ 93a:	10 92 08 23 	sts	0x2308, r1
+	rtl8019Write(RSAR1, bnry);
+ 93e:	20 93 09 23 	sts	0x2309, r18
+	rtl8019Write(CR, (RD0|START));
+ 942:	a0 e0       	ldi	r26, 0x00	; 0
+ 944:	b3 e2       	ldi	r27, 0x23	; 35
+ 946:	8a e0       	ldi	r24, 0x0A	; 10
+ 948:	8c 93       	st	X, r24
+	// transfer packet header
+	for(i=0;i<4;i++)
+		pageheader[i] = rtl8019Read(RDMAPORT);
+ 94a:	e0 e1       	ldi	r30, 0x10	; 16
+ 94c:	f3 e2       	ldi	r31, 0x23	; 35
+ 94e:	80 81       	ld	r24, Z
+ 950:	30 81       	ld	r19, Z
+ 952:	40 81       	ld	r20, Z
+ 954:	50 81       	ld	r21, Z
+	// end the DMA operation
+	rtl8019Write(CR, (RD2|START));
+ 956:	82 e2       	ldi	r24, 0x22	; 34
+ 958:	8c 93       	st	X, r24
+	// wait for remote DMA complete
+	for(i = 0; i < 20; i++)
+		if(rtl8019Read(ISRR) & RDC)
+ 95a:	80 91 07 23 	lds	r24, 0x2307
+ 95e:	86 fd       	sbrc	r24, 6
+ 960:	09 c0       	rjmp	.+18     	; 0x974 <rtl8019BeginPacketRetreive+0x88>
+	for(i=0;i<4;i++)
+		pageheader[i] = rtl8019Read(RDMAPORT);
+	// end the DMA operation
+	rtl8019Write(CR, (RD2|START));
+	// wait for remote DMA complete
+	for(i = 0; i < 20; i++)
+ 962:	81 e0       	ldi	r24, 0x01	; 1
+		if(rtl8019Read(ISRR) & RDC)
+ 964:	e7 e0       	ldi	r30, 0x07	; 7
+ 966:	f3 e2       	ldi	r31, 0x23	; 35
+ 968:	90 81       	ld	r25, Z
+ 96a:	96 fd       	sbrc	r25, 6
+ 96c:	03 c0       	rjmp	.+6      	; 0x974 <rtl8019BeginPacketRetreive+0x88>
+	for(i=0;i<4;i++)
+		pageheader[i] = rtl8019Read(RDMAPORT);
+	// end the DMA operation
+	rtl8019Write(CR, (RD2|START));
+	// wait for remote DMA complete
+	for(i = 0; i < 20; i++)
+ 96e:	8f 5f       	subi	r24, 0xFF	; 255
+ 970:	84 31       	cpi	r24, 0x14	; 20
+ 972:	d1 f7       	brne	.-12     	; 0x968 <rtl8019BeginPacketRetreive+0x7c>
+		if(rtl8019Read(ISRR) & RDC)
+			break;
+	rtl8019Write(ISRR, RDC);
+ 974:	80 e4       	ldi	r24, 0x40	; 64
+ 976:	80 93 07 23 	sts	0x2307, r24
+
+	rxlen = (pageheader[PKTHEADER_PKTLENH]<<8) + pageheader[PKTHEADER_PKTLENL];
+	NextPage = pageheader[PKTHEADER_NEXTPAGE];
+ 97a:	30 93 55 02 	sts	0x0255, r19
+	
+	CurrentRetreiveAddress = (bnry<<8) + 4;
+ 97e:	92 2f       	mov	r25, r18
+ 980:	80 e0       	ldi	r24, 0x00	; 0
+ 982:	04 96       	adiw	r24, 0x04	; 4
+ 984:	90 93 57 02 	sts	0x0257, r25
+ 988:	80 93 56 02 	sts	0x0256, r24
+	
+	// if the NextPage pointer is invalid, the packet is not ready yet - exit
+	if( (NextPage >= RXSTOP_INIT) || (NextPage < RXSTART_INIT) )
+ 98c:	36 54       	subi	r19, 0x46	; 70
+ 98e:	3a 31       	cpi	r19, 0x1A	; 26
+ 990:	50 f4       	brcc	.+20     	; 0x9a6 <rtl8019BeginPacketRetreive+0xba>
+	for(i = 0; i < 20; i++)
+		if(rtl8019Read(ISRR) & RDC)
+			break;
+	rtl8019Write(ISRR, RDC);
+
+	rxlen = (pageheader[PKTHEADER_PKTLENH]<<8) + pageheader[PKTHEADER_PKTLENL];
+ 992:	35 2f       	mov	r19, r21
+ 994:	20 e0       	ldi	r18, 0x00	; 0
+ 996:	24 0f       	add	r18, r20
+ 998:	31 1d       	adc	r19, r1
+	
+	// if the NextPage pointer is invalid, the packet is not ready yet - exit
+	if( (NextPage >= RXSTOP_INIT) || (NextPage < RXSTART_INIT) )
+		return 0;
+    
+	return rxlen-4;
+ 99a:	24 50       	subi	r18, 0x04	; 4
+ 99c:	30 40       	sbci	r19, 0x00	; 0
+ 99e:	05 c0       	rjmp	.+10     	; 0x9aa <rtl8019BeginPacketRetreive+0xbe>
+	// read the boundary register - pointing to the beginning of the packet
+	bnry = rtl8019Read(BNRY) ;
+	
+	// return if there is no packet in the buffer
+	if( bnry == i )
+		return 0;
+ 9a0:	20 e0       	ldi	r18, 0x00	; 0
+ 9a2:	30 e0       	ldi	r19, 0x00	; 0
+ 9a4:	02 c0       	rjmp	.+4      	; 0x9aa <rtl8019BeginPacketRetreive+0xbe>
+	
+	CurrentRetreiveAddress = (bnry<<8) + 4;
+	
+	// if the NextPage pointer is invalid, the packet is not ready yet - exit
+	if( (NextPage >= RXSTOP_INIT) || (NextPage < RXSTART_INIT) )
+		return 0;
+ 9a6:	20 e0       	ldi	r18, 0x00	; 0
+ 9a8:	30 e0       	ldi	r19, 0x00	; 0
+    
+	return rxlen-4;
+}
+ 9aa:	82 2f       	mov	r24, r18
+ 9ac:	93 2f       	mov	r25, r19
+ 9ae:	08 95       	ret
+
+000009b0 <nicPoll>:
+	rtl8019SendPacketData(packet, len);
+	rtl8019EndPacketSend();
+}
+
+unsigned int nicPoll(unsigned int maxlen, unsigned char* packet)
+{
+ 9b0:	ef 92       	push	r14
+ 9b2:	ff 92       	push	r15
+ 9b4:	0f 93       	push	r16
+ 9b6:	1f 93       	push	r17
+ 9b8:	cf 93       	push	r28
+ 9ba:	df 93       	push	r29
+ 9bc:	8c 01       	movw	r16, r24
+ 9be:	7b 01       	movw	r14, r22
+	unsigned int packetLength;
+	
+	packetLength = rtl8019BeginPacketRetreive();
+ 9c0:	0e 94 76 04 	call	0x8ec	; 0x8ec <rtl8019BeginPacketRetreive>
+ 9c4:	ec 01       	movw	r28, r24
+
+	// if there's no packet or an error - exit without ending the operation
+	if( !packetLength )
+ 9c6:	00 97       	sbiw	r24, 0x00	; 0
+ 9c8:	71 f0       	breq	.+28     	; 0x9e6 <nicPoll+0x36>
+		return 0;
+
+	// drop anything too big for the buffer
+	if( packetLength > maxlen )
+ 9ca:	08 17       	cp	r16, r24
+ 9cc:	19 07       	cpc	r17, r25
+ 9ce:	28 f4       	brcc	.+10     	; 0x9da <nicPoll+0x2a>
+	{
+		rtl8019EndPacketRetreive();
+ 9d0:	0e 94 0f 04 	call	0x81e	; 0x81e <rtl8019EndPacketRetreive>
+		return 0;
+ 9d4:	c0 e0       	ldi	r28, 0x00	; 0
+ 9d6:	d0 e0       	ldi	r29, 0x00	; 0
+ 9d8:	06 c0       	rjmp	.+12     	; 0x9e6 <nicPoll+0x36>
+	}
+	
+	// copy the packet data into the packet buffer
+	rtl8019RetreivePacketData( packet, packetLength );
+ 9da:	c7 01       	movw	r24, r14
+ 9dc:	be 01       	movw	r22, r28
+ 9de:	0e 94 cb 03 	call	0x796	; 0x796 <rtl8019RetreivePacketData>
+	rtl8019EndPacketRetreive();
+ 9e2:	0e 94 0f 04 	call	0x81e	; 0x81e <rtl8019EndPacketRetreive>
+		
+	return packetLength;
+}
+ 9e6:	7e 01       	movw	r14, r28
+ 9e8:	8c 2f       	mov	r24, r28
+ 9ea:	9f 2d       	mov	r25, r15
+ 9ec:	df 91       	pop	r29
+ 9ee:	cf 91       	pop	r28
+ 9f0:	1f 91       	pop	r17
+ 9f2:	0f 91       	pop	r16
+ 9f4:	ff 90       	pop	r15
+ 9f6:	ef 90       	pop	r14
+ 9f8:	08 95       	ret
+
+000009fa <rtl8019Init>:
+    rtl8019Write(ISRR, 0xFF);
+}
+
+
+void rtl8019Init(void)
+{
+ 9fa:	6f 92       	push	r6
+ 9fc:	7f 92       	push	r7
+ 9fe:	8f 92       	push	r8
+ a00:	9f 92       	push	r9
+ a02:	af 92       	push	r10
+ a04:	bf 92       	push	r11
+ a06:	cf 92       	push	r12
+ a08:	df 92       	push	r13
+ a0a:	ef 92       	push	r14
+ a0c:	ff 92       	push	r15
+ a0e:	0f 93       	push	r16
+ a10:	1f 93       	push	r17
+ a12:	cf 93       	push	r28
+ a14:	df 93       	push	r29
+	
+	
+	// clear interrupt state
+	rtl8019Write( ISRR, rtl8019Read(ISRR) );
+ a16:	0f 2e       	mov	r0, r31
+ a18:	f7 e0       	ldi	r31, 0x07	; 7
+ a1a:	6f 2e       	mov	r6, r31
+ a1c:	f3 e2       	ldi	r31, 0x23	; 35
+ a1e:	7f 2e       	mov	r7, r31
+ a20:	f0 2d       	mov	r31, r0
+ a22:	d3 01       	movw	r26, r6
+ a24:	8c 91       	ld	r24, X
+ a26:	8c 93       	st	X, r24
+ a28:	e3 ed       	ldi	r30, 0xD3	; 211
+ a2a:	f0 e3       	ldi	r31, 0x30	; 48
+ a2c:	31 97       	sbiw	r30, 0x01	; 1
+ a2e:	f1 f7       	brne	.-4      	; 0xa2c <rtl8019Init+0x32>
+ a30:	00 c0       	rjmp	.+0      	; 0xa32 <rtl8019Init+0x38>
+ a32:	00 00       	nop
+	_delay_ms(50);
+
+	// switch to page 3 to load config registers
+	rtl8019Write(CR, (PS0|PS1|RD2|STOP));
+ a34:	e0 e0       	ldi	r30, 0x00	; 0
+ a36:	f3 e2       	ldi	r31, 0x23	; 35
+ a38:	81 ee       	ldi	r24, 0xE1	; 225
+ a3a:	80 83       	st	Z, r24
+
+	// disable EEPROM write protect of config registers
+	rtl8019Write(RTL_EECR, (EEM1|EEM0));
+ a3c:	c1 e0       	ldi	r28, 0x01	; 1
+ a3e:	d3 e2       	ldi	r29, 0x23	; 35
+ a40:	80 ec       	ldi	r24, 0xC0	; 192
+ a42:	88 83       	st	Y, r24
+
+    // set network type to 10 Base-T link test
+	rtl8019Write(CONFIG2, 0x20);
+ a44:	85 e0       	ldi	r24, 0x05	; 5
+ a46:	93 e2       	ldi	r25, 0x23	; 35
+ a48:	20 e2       	ldi	r18, 0x20	; 32
+ a4a:	dc 01       	movw	r26, r24
+ a4c:	2c 93       	st	X, r18
+
+    // disable powerdown and sleep
+	rtl8019Write(CONFIG3, 0);
+ a4e:	06 e0       	ldi	r16, 0x06	; 6
+ a50:	13 e2       	ldi	r17, 0x23	; 35
+ a52:	d8 01       	movw	r26, r16
+ a54:	1c 92       	st	X, r1
+ a56:	a5 e0       	ldi	r26, 0x05	; 5
+ a58:	b9 ef       	ldi	r27, 0xF9	; 249
+ a5a:	11 97       	sbiw	r26, 0x01	; 1
+ a5c:	f1 f7       	brne	.-4      	; 0xa5a <rtl8019Init+0x60>
+ a5e:	00 c0       	rjmp	.+0      	; 0xa60 <rtl8019Init+0x66>
+ a60:	00 00       	nop
+	_delay_ms(255);
+
+    // reenable EEPROM write protect
+	rtl8019Write(RTL_EECR, 0);
+ a62:	18 82       	st	Y, r1
+
+    // go back to page 0, stop NIC, abort DMA
+	rtl8019Write(CR, (RD2|STOP));
+ a64:	0f 2e       	mov	r0, r31
+ a66:	f1 e2       	ldi	r31, 0x21	; 33
+ a68:	9f 2e       	mov	r9, r31
+ a6a:	f0 2d       	mov	r31, r0
+ a6c:	90 82       	st	Z, r9
+ a6e:	a3 ef       	ldi	r26, 0xF3	; 243
+ a70:	b1 e0       	ldi	r27, 0x01	; 1
+ a72:	11 97       	sbiw	r26, 0x01	; 1
+ a74:	f1 f7       	brne	.-4      	; 0xa72 <rtl8019Init+0x78>
+ a76:	00 c0       	rjmp	.+0      	; 0xa78 <rtl8019Init+0x7e>
+ a78:	00 00       	nop
+	_delay_ms(2);					// wait for traffic to complete
+	rtl8019Write(DCR, DCR_INIT);
+ a7a:	0f 2e       	mov	r0, r31
+ a7c:	fe e0       	ldi	r31, 0x0E	; 14
+ a7e:	ef 2e       	mov	r14, r31
+ a80:	f3 e2       	ldi	r31, 0x23	; 35
+ a82:	ff 2e       	mov	r15, r31
+ a84:	f0 2d       	mov	r31, r0
+ a86:	0f 2e       	mov	r0, r31
+ a88:	f8 e5       	ldi	r31, 0x58	; 88
+ a8a:	af 2e       	mov	r10, r31
+ a8c:	f0 2d       	mov	r31, r0
+ a8e:	d7 01       	movw	r26, r14
+ a90:	ac 92       	st	X, r10
+	rtl8019Write(RBCR0,0x00);
+ a92:	10 92 0a 23 	sts	0x230A, r1
+	rtl8019Write(RBCR1,0x00);
+ a96:	10 92 0b 23 	sts	0x230B, r1
+	
+	#ifdef RTL8019_PROMISCUOUS
+	rtl8019Write(RCR, AB | AM | PRO);
+ a9a:	2c e1       	ldi	r18, 0x1C	; 28
+ a9c:	20 93 0c 23 	sts	0x230C, r18
+	#else
+	rtl8019Write(RCR, AB);
+	#endif
+	rtl8019Write(TPSR, TXSTART_INIT);
+ aa0:	24 e0       	ldi	r18, 0x04	; 4
+ aa2:	33 e2       	ldi	r19, 0x23	; 35
+ aa4:	40 e4       	ldi	r20, 0x40	; 64
+ aa6:	d9 01       	movw	r26, r18
+ aa8:	4c 93       	st	X, r20
+	rtl8019Write(TCR, LB0);
+ aaa:	0f 2e       	mov	r0, r31
+ aac:	fd e0       	ldi	r31, 0x0D	; 13
+ aae:	cf 2e       	mov	r12, r31
+ ab0:	f3 e2       	ldi	r31, 0x23	; 35
+ ab2:	df 2e       	mov	r13, r31
+ ab4:	f0 2d       	mov	r31, r0
+ ab6:	42 e0       	ldi	r20, 0x02	; 2
+ ab8:	d6 01       	movw	r26, r12
+ aba:	4c 93       	st	X, r20
+	rtl8019Write(PSTART, RXSTART_INIT);
+ abc:	0f 2e       	mov	r0, r31
+ abe:	f6 e4       	ldi	r31, 0x46	; 70
+ ac0:	bf 2e       	mov	r11, r31
+ ac2:	f0 2d       	mov	r31, r0
+ ac4:	b8 82       	st	Y, r11
+	rtl8019Write(BNRY, RXSTART_INIT);
+ ac6:	43 e0       	ldi	r20, 0x03	; 3
+ ac8:	53 e2       	ldi	r21, 0x23	; 35
+ aca:	da 01       	movw	r26, r20
+ acc:	bc 92       	st	X, r11
+	rtl8019Write(PSTOP, RXSTOP_INIT);
+ ace:	62 e0       	ldi	r22, 0x02	; 2
+ ad0:	73 e2       	ldi	r23, 0x23	; 35
+ ad2:	0f 2e       	mov	r0, r31
+ ad4:	f0 e6       	ldi	r31, 0x60	; 96
+ ad6:	8f 2e       	mov	r8, r31
+ ad8:	f0 2d       	mov	r31, r0
+ ada:	db 01       	movw	r26, r22
+ adc:	8c 92       	st	X, r8
+	rtl8019Write(CR, (PS0|RD2|STOP));	// switch to page 1
+ ade:	0f 2e       	mov	r0, r31
+ ae0:	f1 e6       	ldi	r31, 0x61	; 97
+ ae2:	8f 2e       	mov	r8, r31
+ ae4:	f0 2d       	mov	r31, r0
+ ae6:	80 82       	st	Z, r8
+ ae8:	a3 ef       	ldi	r26, 0xF3	; 243
+ aea:	b1 e0       	ldi	r27, 0x01	; 1
+ aec:	11 97       	sbiw	r26, 0x01	; 1
+ aee:	f1 f7       	brne	.-4      	; 0xaec <rtl8019Init+0xf2>
+ af0:	00 c0       	rjmp	.+0      	; 0xaf2 <rtl8019Init+0xf8>
+ af2:	00 00       	nop
+	_delay_ms(2);
+	rtl8019Write(CPR, RXSTART_INIT);
+ af4:	d3 01       	movw	r26, r6
+ af6:	bc 92       	st	X, r11
+	
+	// set MAC address
+	rtl8019Write(PAR0, MYMAC_0);
+ af8:	18 82       	st	Y, r1
+	rtl8019Write(PAR1, MYMAC_1);
+ afa:	0f 2e       	mov	r0, r31
+ afc:	f6 e0       	ldi	r31, 0x06	; 6
+ afe:	bf 2e       	mov	r11, r31
+ b00:	f0 2d       	mov	r31, r0
+ b02:	db 01       	movw	r26, r22
+ b04:	bc 92       	st	X, r11
+	rtl8019Write(PAR2, MYMAC_2);
+ b06:	68 e9       	ldi	r22, 0x98	; 152
+ b08:	da 01       	movw	r26, r20
+ b0a:	6c 93       	st	X, r22
+	rtl8019Write(PAR3, MYMAC_3);
+ b0c:	40 ef       	ldi	r20, 0xF0	; 240
+ b0e:	d9 01       	movw	r26, r18
+ b10:	4c 93       	st	X, r20
+	rtl8019Write(PAR4, MYMAC_4);
+ b12:	21 e1       	ldi	r18, 0x11	; 17
+ b14:	dc 01       	movw	r26, r24
+ b16:	2c 93       	st	X, r18
+	rtl8019Write(PAR5, MYMAC_5);
+ b18:	83 e2       	ldi	r24, 0x23	; 35
+ b1a:	d8 01       	movw	r26, r16
+ b1c:	8c 93       	st	X, r24
+    
+	// initialize sequence per NE2000 spec
+	rtl8019Write(CR, (RD2|STOP));
+ b1e:	90 82       	st	Z, r9
+	rtl8019Write(DCR, DCR_INIT);
+ b20:	d7 01       	movw	r26, r14
+ b22:	ac 92       	st	X, r10
+	rtl8019Write(CR, (RD2|START));
+ b24:	82 e2       	ldi	r24, 0x22	; 34
+ b26:	80 83       	st	Z, r24
+	rtl8019Write(ISRR,0xFF);			// clear all interrupts
+ b28:	9f ef       	ldi	r25, 0xFF	; 255
+ b2a:	d3 01       	movw	r26, r6
+ b2c:	9c 93       	st	X, r25
+	rtl8019Write(IMR, IMR_INIT);
+ b2e:	20 93 0f 23 	sts	0x230F, r18
+	rtl8019Write(TCR, TCR_INIT);
+ b32:	d6 01       	movw	r26, r12
+ b34:	1c 92       	st	X, r1
+	
+	rtl8019Write(CR, (RD2|START));	// start the NIC
+ b36:	80 83       	st	Z, r24
+}
+ b38:	df 91       	pop	r29
+ b3a:	cf 91       	pop	r28
+ b3c:	1f 91       	pop	r17
+ b3e:	0f 91       	pop	r16
+ b40:	ff 90       	pop	r15
+ b42:	ef 90       	pop	r14
+ b44:	df 90       	pop	r13
+ b46:	cf 90       	pop	r12
+ b48:	bf 90       	pop	r11
+ b4a:	af 90       	pop	r10
+ b4c:	9f 90       	pop	r9
+ b4e:	8f 90       	pop	r8
+ b50:	7f 90       	pop	r7
+ b52:	6f 90       	pop	r6
+ b54:	08 95       	ret
+
+00000b56 <nicInit>:
+#define RXSTART_INIT   	0x46
+#define RXSTOP_INIT    	0x60
+
+void nicInit(void)
+{
+	rtl8019Init();
+ b56:	0e 94 fd 04 	call	0x9fa	; 0x9fa <rtl8019Init>
+}
+ b5a:	08 95       	ret
+
+00000b5c <strncmp>:
+ b5c:	fb 01       	movw	r30, r22
+ b5e:	dc 01       	movw	r26, r24
+ b60:	41 50       	subi	r20, 0x01	; 1
+ b62:	50 40       	sbci	r21, 0x00	; 0
+ b64:	30 f0       	brcs	.+12     	; 0xb72 <strncmp+0x16>
+ b66:	8d 91       	ld	r24, X+
+ b68:	01 90       	ld	r0, Z+
+ b6a:	80 19       	sub	r24, r0
+ b6c:	19 f4       	brne	.+6      	; 0xb74 <strncmp+0x18>
+ b6e:	00 20       	and	r0, r0
+ b70:	b9 f7       	brne	.-18     	; 0xb60 <strncmp+0x4>
+ b72:	88 1b       	sub	r24, r24
+ b74:	99 0b       	sbc	r25, r25
+ b76:	08 95       	ret
+
+00000b78 <itoa>:
+ b78:	fb 01       	movw	r30, r22
+ b7a:	9f 01       	movw	r18, r30
+ b7c:	e8 94       	clt
+ b7e:	42 30       	cpi	r20, 0x02	; 2
+ b80:	c4 f0       	brlt	.+48     	; 0xbb2 <itoa+0x3a>
+ b82:	45 32       	cpi	r20, 0x25	; 37
+ b84:	b4 f4       	brge	.+44     	; 0xbb2 <itoa+0x3a>
+ b86:	4a 30       	cpi	r20, 0x0A	; 10
+ b88:	29 f4       	brne	.+10     	; 0xb94 <itoa+0x1c>
+ b8a:	97 fb       	bst	r25, 7
+ b8c:	1e f4       	brtc	.+6      	; 0xb94 <itoa+0x1c>
+ b8e:	90 95       	com	r25
+ b90:	81 95       	neg	r24
+ b92:	9f 4f       	sbci	r25, 0xFF	; 255
+ b94:	64 2f       	mov	r22, r20
+ b96:	77 27       	eor	r23, r23
+ b98:	0e 94 ed 05 	call	0xbda	; 0xbda <__udivmodhi4>
+ b9c:	80 5d       	subi	r24, 0xD0	; 208
+ b9e:	8a 33       	cpi	r24, 0x3A	; 58
+ ba0:	0c f0       	brlt	.+2      	; 0xba4 <itoa+0x2c>
+ ba2:	89 5d       	subi	r24, 0xD9	; 217
+ ba4:	81 93       	st	Z+, r24
+ ba6:	cb 01       	movw	r24, r22
+ ba8:	00 97       	sbiw	r24, 0x00	; 0
+ baa:	a1 f7       	brne	.-24     	; 0xb94 <itoa+0x1c>
+ bac:	16 f4       	brtc	.+4      	; 0xbb2 <itoa+0x3a>
+ bae:	5d e2       	ldi	r21, 0x2D	; 45
+ bb0:	51 93       	st	Z+, r21
+ bb2:	10 82       	st	Z, r1
+ bb4:	c9 01       	movw	r24, r18
+ bb6:	0c 94 dd 05 	jmp	0xbba	; 0xbba <strrev>
+
+00000bba <strrev>:
+ bba:	dc 01       	movw	r26, r24
+ bbc:	fc 01       	movw	r30, r24
+ bbe:	67 2f       	mov	r22, r23
+ bc0:	71 91       	ld	r23, Z+
+ bc2:	77 23       	and	r23, r23
+ bc4:	e1 f7       	brne	.-8      	; 0xbbe <strrev+0x4>
+ bc6:	32 97       	sbiw	r30, 0x02	; 2
+ bc8:	04 c0       	rjmp	.+8      	; 0xbd2 <strrev+0x18>
+ bca:	7c 91       	ld	r23, X
+ bcc:	6d 93       	st	X+, r22
+ bce:	70 83       	st	Z, r23
+ bd0:	62 91       	ld	r22, -Z
+ bd2:	ae 17       	cp	r26, r30
+ bd4:	bf 07       	cpc	r27, r31
+ bd6:	c8 f3       	brcs	.-14     	; 0xbca <strrev+0x10>
+ bd8:	08 95       	ret
+
+00000bda <__udivmodhi4>:
+ bda:	aa 1b       	sub	r26, r26
+ bdc:	bb 1b       	sub	r27, r27
+ bde:	51 e1       	ldi	r21, 0x11	; 17
+ be0:	07 c0       	rjmp	.+14     	; 0xbf0 <__udivmodhi4_ep>
+
+00000be2 <__udivmodhi4_loop>:
+ be2:	aa 1f       	adc	r26, r26
+ be4:	bb 1f       	adc	r27, r27
+ be6:	a6 17       	cp	r26, r22
+ be8:	b7 07       	cpc	r27, r23
+ bea:	10 f0       	brcs	.+4      	; 0xbf0 <__udivmodhi4_ep>
+ bec:	a6 1b       	sub	r26, r22
+ bee:	b7 0b       	sbc	r27, r23
+
+00000bf0 <__udivmodhi4_ep>:
+ bf0:	88 1f       	adc	r24, r24
+ bf2:	99 1f       	adc	r25, r25
+ bf4:	5a 95       	dec	r21
+ bf6:	a9 f7       	brne	.-22     	; 0xbe2 <__udivmodhi4_loop>
+ bf8:	80 95       	com	r24
+ bfa:	90 95       	com	r25
+ bfc:	bc 01       	movw	r22, r24
+ bfe:	cd 01       	movw	r24, r26
+ c00:	08 95       	ret
+
+00000c02 <_exit>:
+ c02:	f8 94       	cli
+
+00000c04 <__stop_program>:
+ c04:	ff cf       	rjmp	.-2      	; 0xc04 <__stop_program>

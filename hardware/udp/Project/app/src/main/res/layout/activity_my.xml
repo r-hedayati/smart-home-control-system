@@ -1,0 +1,122 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:weightSum="1"
+        >
+
+        <TextView
+            android:layout_width="241dp"
+            android:layout_height="30dp"
+            android:text="DestIP:"
+            android:textStyle="bold"
+            android:gravity="left"
+            android:scrollbars = "vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0.65"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_gravity="left|center_vertical" />
+
+        <TextView
+            android:layout_width="141dp"
+            android:layout_height="30dp"
+            android:text="Port:"
+            android:textStyle="bold"
+            android:gravity="left"
+            android:scrollbars = "vertical"
+            android:layout_weight="0.35"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_gravity="right|center_vertical" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <EditText
+            android:id="@+id/IPAddr"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="0.63">
+        </EditText>
+
+        <EditText
+            android:id="@+id/Port"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="0.37">
+        </EditText>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="Command:"
+        android:textStyle="bold"
+        android:gravity="left"
+        android:layout_marginLeft="5dp"
+        android:scrollbars = "vertical"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        />
+
+    <EditText
+        android:id="@+id/Command"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="1dp">
+    </EditText>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+         <Button
+            android:id="@+id/on_button"
+            android:layout_width="151dp"
+            android:layout_height="40dp"
+            android:background="@color/custom_bn"
+            android:text="Send/Recieve"
+            android:textColor="@color/custom_bg1"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:id="@+id/off_button"
+            android:layout_width="151dp"
+            android:layout_height="40dp"
+            android:background="@color/custom_bn"
+            android:text="Send/Recieve"
+            android:textColor="@color/custom_bg1"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+         <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Communication Status:"
+             android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:scrollbars = "vertical"
+            android:elevation="5dp"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </ScrollView>
+
+
+
+</LinearLayout>
